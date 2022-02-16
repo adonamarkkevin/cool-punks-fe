@@ -1,0 +1,136 @@
+
+
+/*------------------------------------------
+        Article Detail Start Here
+-------------------------------------------*/
+
+.article-detail-main-dark{
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .row-detail{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .col-detail-otr{
+                .col-detail-inr{
+                    .head{
+                        color: $White-Color;
+                        @include breakpoint($secreen-max-xxl){
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .line{
+                width: 100%;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0;
+            }
+            .col-detail-otr-2{
+                .col-detail-inr-2{
+                    .head-1{
+                        color: $White-Color;
+                        &:not(:first-child){
+                            margin: 24px 0 0 0;
+                        }
+                    }
+                    .desc{
+                        color: $Dark-Gray-Shade-1;
+                        margin: 16px 0 0 0;
+                    }
+                    .desc-1{
+                        margin: 0;
+                    }
+                    .head-2{
+                        color: $White-Color;
+                        margin: 20px 0 0 0;
+                    }
+                    .desc-two{
+                        color: $Dark-Gray-Shade-1;
+                        margin: 12px 0 0 0;
+                    }
+                    .content-otr{
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 24px;
+                        padding: 28px 36px;
+                        margin: 28px 0 24px 0;
+                        .desc-inr{
+                            color: $Dark-Gray-Shade-1;
+                        }
+                    }
+                }
+            }
+            .wrapper{
+                border-top: 1px solid $Dark-bg-tertiary;
+                border-bottom: 1px solid $Dark-bg-tertiary;
+                padding: 48px 15px;
+                margin: 36px 0 0 0;
+                .row-icon{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .col-icon-otr{
+                        .col-icon-inr{
+                            display: flex;
+                            align-items: center;
+                            @include breakpoint($secreen-custom){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .heading-icon{
+                                color: $White-Color;
+                                margin: 0 24px 0 0;
+                                @include breakpoint($secreen-custom){
+                                    margin: 0 0 24px 0;
+                                }
+                            }
+                            .icon-main{
+                                display: flex;
+                                align-items: center;
+                                .icon-otr{
+                                    &:not(:last-child){
+                                        margin: 0 16px 0 0;
+                                    }
+                                    .icon-inr{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 52px;
+                                        height: 52px;
+                                        border-radius: 100%;
+                                        background-color: $Dark-bg-quaternary;
+                                        @include site-transition;
+                                        &:hover{
+                                            background-color: $Primary-Color-Home-1;
+                                            .smile-icon{
+                                                path{
+                                                    stroke: $White-Color;
+                                                }
+                                            }
+                                        }
+                                        .smile-icon{
+                                            path{
+                                                stroke: $Primary-Color-Home-1;
+                                                @include site-transition;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Article Detail End Here
+-------------------------------------------*/

@@ -1,0 +1,862 @@
+
+
+
+/*------------------------------------------
+            Navbar Start Here
+-------------------------------------------*/
+
+.navbar-main-2-dark{
+    .container-fluid{
+        .navbar-inr-2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 0;
+            @include breakpoint($secreen-max-md){
+                padding: 24px 0;
+            }
+            .burger-menu{
+                display: flex;
+                align-items: center;
+                .burger-icon-otr{
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 100%;
+                    background-color: $Dark-bg-quaternary;
+                    position: relative;
+                    margin-right: 12px;
+                    display: none;
+                    @include breakpoint ($secreen-max-md){
+                        display: block;
+                    }
+                    @include breakpoint($secreen-xxs){
+                        width: 44px;
+                        height: 44px;
+                    }
+                    .burger-icon{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        &:hover{
+                            cursor: pointer;
+                            path{
+                                stroke: $Primary-Color-Home-1;
+                            }
+                        }
+                        path{
+                            stroke: $Gray-Shade-2;
+                            transition: .3s;
+                        }
+                    }
+                }
+                .logo-otr{
+                    .logo-img{
+                        width: 100px;
+                    }
+                }
+            }
+            .input-main{
+                position: relative;
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .input{
+                    width: 320px;
+                    padding-right: 52px;
+                    color: $Dark-Gray-Shade-2;
+                    background-color: $Dark-bg-quaternary;
+                    &::placeholder{
+                        color: $Dark-Gray-Shade-2;
+                    }
+                    @include breakpoint($secreen-max-xxxl){
+                        width: 100%;
+                    }
+                    @include breakpoint($secreen-max-lg){
+                        width: 180px;
+                    }
+                }
+                .search-icon{
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    path{
+                        stroke: $Dark-Gray-Shade-2;
+                    }
+                }
+            }
+            .navigation-otr{
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .navigation-inr{
+                    display: flex;
+                    align-items: center;
+                    .nav-li{
+                        position: relative;
+                        &:not(:last-child){
+                            margin-right: 40px;
+                            @include breakpoint($secreen-max-lg){
+                                margin-right: 20px;
+                            }
+                        }
+                        &:hover{
+                            .dropdown-otr{
+                                top: 50px;
+                                opacity: 1;
+                                visibility: visible;
+                                filter: blur(0);
+                            }
+                        }
+                        .nav-a{
+                            color: $Dark-Gray-Shade-1;
+                            line-height: 50px;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .dropdown-otr{
+                            position: absolute;
+                            top: 100px;
+                            left: -24px;
+                            width: 220px;
+                            padding: 16px 24px;
+                            opacity: 0;
+                            visibility: hidden;
+                            background-color: $Dark-Black-2-Color;
+                            filter: blur(10px);
+                            border-radius: 24px;
+                            z-index: 20;
+                            transition: .5s;
+                            .dropdown-li{
+                                position: relative;
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                &:hover{
+                                    .other-dropdown-otr{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        top: -24px;
+                                        filter: blur(0);
+                                    }
+                                }
+                                .dropdown-a{
+                                    position: relative;
+                                    display: inline-flex;
+                                    color: $Dark-Gray-Shade-1;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                        padding-left: 16px;
+                                    }
+                                    &:hover::after{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        left: 0;
+                                    }
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $Primary-Color-Home-1;
+                                        top: 50%;
+                                        left: -16px;
+                                        transform: translateY(-50%);
+                                        border-radius: 50px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                    }
+                                }
+                                .other-dropdown-otr{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 170px;
+                                    width: 220px;
+                                    padding: 16px 24px;
+                                    background-color: $Dark-Black-2-Color;
+                                    filter: blur(10px);
+                                    border-radius: 24px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: .5s;
+                                    z-index: 30;
+                                    .other-dropdown-li{
+                                        position: relative;
+                                        &:not(:last-child){
+                                            margin-bottom: 8px;
+                                        }
+                                        .other-dropdown-a{
+                                            position: relative;
+                                            display: inline-flex;
+                                            color: $Dark-Gray-Shade-1;
+                                            transition: .3s;
+                                            &:hover{
+                                                color: $Primary-Color-Home-1;
+                                                padding-left: 16px;
+                                            }
+                                            &:hover::after{
+                                                opacity: 1;
+                                                visibility: visible;
+                                                left: 0;
+                                            }
+                                            &::after{
+                                                content: "";
+                                                position: absolute;
+                                                width: 8px;
+                                                height: 8px;
+                                                background-color: $Primary-Color-Home-1;
+                                                top: 50%;
+                                                left: -16px;
+                                                transform: translateY(-50%);
+                                                border-radius: 50px;
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: .3s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .display{
+                        @include breakpoint($secreen-max-lg){
+                            display: none;
+                        }
+                    }
+                    .dots{
+                        position: relative;
+                        display: none;
+                        @include breakpoint($secreen-max-lg){
+                            display: block;
+                        }
+                        .dot-a{
+                            color: $Gray-Shade-1;
+                            line-height: 50px;
+                            transition: .3s;
+                            cursor: pointer;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .dropdown-dot{
+                            position: absolute;
+                            left: -24px;
+                            width: 220px;
+                            padding: 16px 24px;
+                            opacity: 0;
+                            visibility: hidden;
+                            background-color: $Dark-Black-2-Color;
+                            border-radius: 24px;
+                            z-index: 20;
+                            transition: .5s;
+                            .dropdown-li{
+                                position: relative;
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                &:hover{
+                                    .other-dropdown-otr{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        top: -24px;
+                                        filter: blur(0);
+                                    }
+                                }
+                                .dropdown-a{
+                                    position: relative;
+                                    display: inline-flex;
+                                    color: $Dark-Gray-Shade-1;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                        padding-left: 16px;
+                                    }
+                                    &:hover::after{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        left: 0;
+                                    }
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $Primary-Color-Home-1;
+                                        top: 50%;
+                                        left: -16px;
+                                        transform: translateY(-50%);
+                                        border-radius: 50px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                    }
+                                }
+                                .other-dropdown-otr{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 170px;
+                                    width: 220px;
+                                    padding: 16px 24px;
+                                    background-color: $Dark-Black-2-Color;
+                                    filter: blur(10px);
+                                    border-radius: 24px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: .5s;
+                                    z-index: 30;
+                                    .other-dropdown-li{
+                                        position: relative;
+                                        &:not(:last-child){
+                                            margin-bottom: 8px;
+                                        }
+                                        .other-dropdown-a{
+                                            position: relative;
+                                            display: inline-flex;
+                                            color: $Dark-Gray-Shade-1;
+                                            transition: .3s;
+                                            &:hover{
+                                                color: $Primary-Color-Home-1;
+                                                padding-left: 16px;
+                                            }
+                                            &:hover::after{
+                                                opacity: 1;
+                                                visibility: visible;
+                                                left: 0;
+                                            }
+                                            &::after{
+                                                content: "";
+                                                position: absolute;
+                                                width: 8px;
+                                                height: 8px;
+                                                background-color: $Primary-Color-Home-1;
+                                                top: 50%;
+                                                left: -16px;
+                                                transform: translateY(-50%);
+                                                border-radius: 50px;
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: .3s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .action-otr{
+                display: flex;
+                align-items: center;
+                .btn-create{
+                    @include breakpoint($secreen-max-md){
+                        display: none;
+                    }
+                }
+                .bell-icon-otr{
+                    position: relative;
+                    margin: 0 24px;
+                    @include breakpoint($secreen-xs){
+                        position: inherit;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 24px 0 0;
+                    }
+                    .icon-inr{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 52px;
+                        height: 52px;
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 100%;
+                        transition: .3s;
+                        cursor: pointer;
+                        @include breakpoint($secreen-xxs){
+                            width: 44px;
+                            height: 44px;
+                        }
+                        .bell-icon{
+
+                        }
+                        .circle{
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            background-color: $Primary-Color-Home-1;
+                            border-radius: 100%;
+                            top: 3px;
+                            right: 3px;
+                        }
+                    }
+                    .icon-hover{
+                        position: absolute;
+                        z-index: 999;
+                        right: 0;
+                        background-color: $Dark-Black-2-Color;
+                        width: 370px;
+                        border-radius: 24px;
+                        padding: 20px 28px 24px 28px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .3s;
+                        @include breakpoint($secreen-xs){
+                            width: calc(100% - 30px);
+                            margin: 24px 15px 0 15px;
+                        }
+                        .heading-otr{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 0 0 16px 0;
+                            .head{
+                                color: $White-Color;
+                            }
+                            .link-see{
+                                color: $Primary-Color-Home-1;
+                                cursor: pointer;
+                            }
+                        }
+                        .box-otr{
+                            display: flex;
+                            align-items: center;
+                            &:not(:last-child){
+                                margin: 0 0 12px 0;
+                            }
+                            .img-otr{
+                                margin: 0 16px 0 0;
+                                cursor: pointer;
+                                .art-img{
+                                    width: 60px;
+                                    border-radius: 16px;
+                                }
+                            }
+                            .content-otr{
+                                .desc{
+                                    color: $White-Color;
+                                }
+                                .desc-2{
+                                    color: $Dark-Gray-Shade-1;
+                                }
+                                .desc-3{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                            }
+                        }
+                    }
+                }
+                .profile-otr{
+                    position: relative;
+                    @include breakpoint($secreen-xs){
+                        position: inherit;
+                    }
+                    .profile-inr{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        height: 52px;
+                        border-radius: 12px;
+                        border: 1px solid $Dark-bg-tertiary;
+                        transition: .3s;
+                        cursor: pointer;
+                        @include breakpoint($secreen-xs){
+                            border: none;
+                            border-radius: 0;
+                        }
+                        @include breakpoint($secreen-xxs){
+                            height: 44px;
+                        }
+                        .creator{
+                            width: 52px;
+                            height: 52px;
+                            border-radius: 12px;
+                            @include breakpoint($secreen-xxs){
+                                width: 44px;
+                                height: 44px;
+                            }
+                        }
+                        .price{
+                            color: $White-Color;
+                            margin: 0 16px;
+                            @include breakpoint($secreen-xs){
+                                display: none;
+                            }
+                        }
+                    }
+                    .icon-hover-2{
+                        position: absolute;
+                        z-index: 999;
+                        right: 0;
+                        background-color: $Dark-Black-2-Color;
+                        width: 275px;
+                        border-radius: 24px;
+                        padding: 20px 28px;
+                        transition: .3s;
+                        box-shadow: $box-shadow-custom;
+                        opacity: 0;
+                        visibility: hidden;
+                        @include breakpoint($secreen-xs){
+                            width: calc(100% - 30px);
+                            margin: 24px 15px 0 15px;
+                        }
+                        .heading{
+                            color: $White-Color;
+                            margin: 0 0 8px 0;
+                        }
+                        .copy-icon-otr{
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            .desc{
+                                color: $Dark-Gray-Shade-2;
+                                margin: 0 8px 0 0;
+                            }
+                            .copy-icon{
+                                path{
+                                    stroke: $Dark-Gray-Shade-1;
+                                }
+                            }
+                        }
+                        .box-otr{
+                            display: flex;
+                            align-items: center;
+                            background-color: $Dark-bg-quaternary;
+                            border-radius: 16px;
+                            padding: 12px 20px 12px 16px;
+                            margin: 20px 0;
+                            .img-otr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 52px;
+                                height: 52px;
+                                border-radius: 100%;
+                                background-color: $Dark-bg-tertiary;
+                                margin: 0 12px 0 0;
+                            }
+                            .price-otr{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                .desc{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                                .heading{
+                                    color: $White-Color;
+                                }
+                            }
+                        }
+                        .link-profile-otr{
+                            .link-profile-inr{
+                                display: flex;
+                                align-items: center;
+                                &:not(:last-child){
+                                    margin: 0 0 8px 0;
+                                }
+                                &:hover{
+                                    .profile{
+                                        color: $Primary-Color-Home-1 !important;
+                                        margin: 0 0 0 8px;
+                                    }
+                                    .circle-hover{
+                                        display: block;
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+                                .profile{
+                                    color: $Dark-Gray-Shade-1 !important;
+                                    transition: .3s !important;
+                                }
+                                .circle-hover{
+                                    display: none;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: $Primary-Color-Home-1;
+                                    border-radius: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.displayblock{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.nav-home3{
+    box-shadow: $box-shadow-custom;
+    background-color: $Dark-bg-quaternary;
+}
+
+/*------------------------------------------
+            Navbar End Here
+-------------------------------------------*/
+
+
+/*------------------------------------------
+          About Start Here
+-------------------------------------------*/
+
+.home3-hero-dark{
+    margin: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        margin: 48px 0 80px 0;
+    }
+    .container-fluid{
+        .row-content{
+            margin: 0 0 48px 0;
+            align-items: center;
+            .col-head-otr{
+                .col-head-inr{
+                    position: relative;
+                    .head{
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-image: linear-gradient(to right, #366CE3, #D0FC00);
+                        position: relative;
+                        z-index: 2;
+                    }
+                }
+            }
+            .col-text-otr{
+                .col-text-inr{
+                    .desc{
+                        color: $Dark-Gray-Shade-1;
+                        margin: 0 0 24px 0;
+                    }
+                    .btn-otr{
+                        display: flex;
+                        align-items: center;
+                        .btn-explore{
+                            margin: 0 16px 0 0;
+                            &:hover{
+                                box-shadow: none;
+                            }
+                        }
+                        .btn-create{
+                            color: $White-Color;
+                            &:hover{
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper{
+            width: 100%;
+            height: 600px;
+            background-color: $Dark-bg-quaternary;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            @include breakpoint($secreen-max-md){
+                height: 350px;
+            }
+            @include breakpoint($secreen-max-sm){
+                height: 300px;
+            }
+            @include breakpoint($secreen-xs){
+                height: 200px;
+            }
+            .row-imgs{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: 2;
+                transform: translateY(-50%) rotate(-15deg);
+                .col-img-otr{
+                    @include breakpoint($secreen-xs){
+                        max-width: 25%;
+                        width: 25%;
+                    }
+                    .col-img-inr{
+                        &:not(:last-child){
+                            margin-bottom: 30px;
+                            @include breakpoint($secreen-xs){
+                                margin-bottom: 24px;
+                            }
+                        }
+                        .about-img{
+                            border-radius: 16px;
+                        }
+                    }
+                }
+                .box-5,.box-6{
+                    @include breakpoint($secreen-xs){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+          About End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+          Work Start Here
+-------------------------------------------*/
+
+.work-main-dark{
+    margin: 128px 0;
+    @include breakpoint($secreen-max-sm){
+        margin: 80px 0;
+    }
+    .container-fluid{
+        .wrapper{
+            display: flex;
+            align-items: center;
+            padding: 0 0 36px 0;
+            border-bottom: 1px solid $Dark-bg-tertiary;
+            margin: 0 0 48px 0;
+            @include breakpoint($secreen-max-sm){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .head{
+                margin: 0 48px 0 0;
+                color: $White-Color;
+                @include breakpoint($secreen-max-sm){
+                    margin: 0 0 24px 0;
+                }
+            }
+            .teb-main{
+                .tabs{
+                    display: flex;
+                    align-items: center;
+                    .tab-link-work{
+                        &:not(:last-child){
+                            margin-right: 24px;
+                        }
+                        .tab-p{
+                            padding: 4px 16px;
+                            border-radius: 12px;
+                            background-color: $Dark-bg-quaternary;
+                            color: $Dark-Gray-Shade-1;
+                            transition: .3s;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            @include breakpoint($secreen-xxsx){
+                                padding: 4px 15px;
+                            }
+                        }
+                    }
+                    .active{
+                        .tab-p{
+                            background-color: $Primary-Color-Home-1;
+                            color: $White-Color;
+                        }
+                    }
+                }
+            }
+        }
+        .row-work{
+            .tab-content{
+                display: none;
+                opacity: 0;
+                transform: translateY(15px);
+                animation: fadeIn 0.5s ease 1 forwards;
+                .row-work-inr{
+                    .col-work-otr{
+                        .col-work-inr{
+                            background-color: $Dark-bg-quaternary;
+                            border-radius: 24px;
+                            .icon-otr{
+                                display: flex;
+                                align-items: center;
+                                background-color: $Dark-bg-tertiary;
+                                border-radius: 24px;
+                                padding: 24px 28px 23px 28px;
+                                .icon-inr{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: relative;
+                                    margin: 0 20px 0 0;
+                                    .bg-icon{
+                                        width: 60px;
+                                        height: 60px;
+                                        border-radius: 16px;
+                                        background-color: $Primary-Color-Home-1;
+                                    }
+                                    .icon{
+                                        position: absolute;
+                                        z-index: 2;
+                                    }
+                                }
+                                .heading{
+                                    color: $White-Color;
+                                }
+                            }
+                            .desc{
+                                color: $Dark-Gray-Shade-1;
+                                padding: 24px 28px;
+                            }
+                        }
+                        .box1,.box2{
+                            @include breakpoint($secreen-max-md){
+                                margin-bottom: 24px;
+                            }
+                        }
+                    }
+                    .col-work-otr{
+                        .box2{
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column-reverse;
+                            @include breakpoint($secreen-max-md){
+                                flex-direction: column;
+                            }
+                            .icon-otr{
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                .icon-inr{
+                                    .bg-icon{
+                                        background-color: $Secondary-Color-Home-1;
+                                    }
+                                    .icon{
+                                    }
+                                }
+                                .heading{
+                                }
+                            }
+                            .desc{
+                            }
+                        }
+                    }
+                }
+            }
+            .active{
+                display: block;
+            }
+        }
+    }
+}
+.how-it-work{
+    margin: 96px 0 128px 0 ;
+    @include breakpoint($secreen-max-sm){
+        margin: 48px 0 80px 0;
+    } 
+}
+
+/*------------------------------------------
+          Work End Here
+-------------------------------------------*/

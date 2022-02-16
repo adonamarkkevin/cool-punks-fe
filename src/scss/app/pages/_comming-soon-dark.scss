@@ -1,0 +1,264 @@
+
+
+/*------------------------------------------
+          Comming Soon Start Here
+-------------------------------------------*/
+
+.comming-soon-main-dark{
+    position: relative;
+    overflow: hidden;
+    @include breakpoint($secreen-max-lg){
+        overflow: visible;
+    }
+    .container-fluid{
+        height: 100vh;
+        @include breakpoint($secreen-xxs){
+            height: 100%;
+        }
+        .row-soon{
+            .content-otr{
+                position: relative;
+                @include breakpoint($secreen-max-lg){
+                    width: 100%;
+                }
+                .content-inr{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: relative;
+                    padding: 32px 15px 32px 0;
+                    z-index: 2;
+                    height: 100vh;
+                    @include breakpoint($secreen-xxs){
+                        height: 100%;
+                    }
+                    @include breakpoint($secreen-max-lg){
+                        padding: 32px 0;
+                        justify-content: inherit;
+                    }
+                    .logo-otr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .logo{
+                            width: 100px;
+                        }
+                        .icon-otr{
+                            @include breakpoint($secreen-xxs){
+                                display: none;
+                            }
+                            .icon-ul{
+                                display: flex;
+                                align-items: center;
+                                .icon-li{
+                                    &:not(:last-child){
+                                        margin: 0 16px 0 0;
+                                    }
+                                    .icon-a{
+                                        .icon{
+                                            &:hover{
+                                                path{
+                                                    stroke: $Primary-Color-Home-1;
+                                                }
+                                            }
+                                            path{
+                                                stroke: $Dark-Gray-Shade-2;
+                                                transition: .2s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .content{
+                        @include breakpoint($secreen-xxs){
+                            margin: 40px 0;
+                        }
+                        @include breakpoint($secreen-max-lg){
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            margin: 80px 0;
+                        }
+                        .heading{
+                            color: $White-Color;
+                            @include breakpoint($secreen-max-lg){
+                                text-align: center;
+                            }
+                        }
+                        .desc{
+                            color: $Dark-Gray-Shade-1;
+                            margin: 20px 0 0 0;
+                            @include breakpoint($secreen-max-lg){
+                                text-align: center;
+                            }
+                        }
+                        .auction-main{
+                            display: flex;
+                            margin: 40px 0 0 0;
+                            .timer{
+                                display: flex;
+                                align-items: center;
+                                background-color: $Dark-bg-quaternary;
+                                padding: 24px 32px;
+                                border-radius: 24px;
+                                .main{
+                                    &:not(:last-child){
+                                        margin-right: 24px;
+                                    }
+                                    .time-inr{
+                                        color: $White-Color;
+                                        margin: 0 0 4px 0;
+                                    }
+                                    .time{
+                                        color: $Dark-Gray-Shade-2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .footer-otr{
+                        .head{
+                            color: $White-Color;
+                            margin: 0 0 24px 0;
+                        }
+                        .footer{
+                            display: flex;
+                            align-items: center;
+                            @include breakpoint($secreen-xs){
+                                align-items: flex-start;
+                            }
+                            @include breakpoint($secreen-xxs){
+                                flex-direction: column;
+                            }
+                            .form-main{
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                @include breakpoint($secreen-xs){
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    margin: 0 34px 0 0;
+                                }
+                                .input-otr{
+                                    width: 100%;
+                                    .input{
+                                        width: 100%;
+                                        background-color: $Dark-bg-quaternary;
+                                        color: $Dark-Gray-Shade-2;
+                                        &::placeholder{
+                                            color: $Dark-Gray-Shade-2;
+                                        }
+                                    }
+                                }
+                                .action-otr{
+                                    margin: 0 34px 0 16px;
+                                    @include breakpoint($secreen-xs){
+                                        margin: 24px 0 0 0;
+                                    }
+                                    @include breakpoint($secreen-xxs){
+                                        margin: 24px 0;
+                                    }
+                                    .button{
+                                        background-color: $Primary-Color-Home-1;
+                                        color: $White-Color;
+                                        border: none;
+                                        border-radius: 16px;
+                                        padding: 10px 24px;
+                                        @include site-transition;
+                                        &:hover{
+                                            background-color: $Secondary-Color-Home-1;
+                                            color: $Black-Color;
+                                        }
+                                    }
+                                }
+                            }
+                            .language-selector{
+                                .language-ul{
+                                    .language-li{
+                                        position: relative;
+                                        .language-a{
+                                            padding: 9px 24px;
+                                            border: 1px solid $Dark-bg-tertiary;
+                                            border-radius: 16px;
+                                            display: flex;
+                                            align-items: center;
+                                            &:hover{
+                                                cursor: pointer;
+                                            }
+                                            .flag-img{
+                                                width: 24px;
+                                                height: 24px;
+                                                border-radius: 100%;
+                                            }
+                                            .language{
+                                                padding: 0 8px;
+                                                color: $Dark-Gray-Shade-1;
+                                            }
+                                            .caret-down{
+                                                position: relative;
+                                                top: 1px;
+                                                path{
+                                                    stroke: $Dark-Gray-Shade-1;
+                                                }
+                                            }
+                                        }
+                                        .drop-ul{
+                                            padding: 20px 24px;
+                                            background-color: $Dark-Black-2-Color;
+                                            border-radius: 16px;
+                                            position: absolute;
+                                            width: 100%;
+                                            top: -164px;
+                                            display: none;
+                                            .drop-li{
+                                                &:not(:last-child){
+                                                    margin-bottom: 8px;
+                                                }
+                                                .drop-a{
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    &:hover{
+                                                        cursor: pointer;
+                                                    }
+                                                    .flag-img{
+                                                        width: 24px;
+                                                        height: 24px;
+                                                        border-radius: 100%;
+                                                    }
+                                                    .language{
+                                                        color: $Dark-Gray-Shade-1;
+                                                        padding-left: 8px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .block{
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .soon-img{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        @include breakpoint($secreen-max-lg){
+            display: none;
+        }
+    }
+}
+
+/*------------------------------------------
+          Comming Soon End Here
+-------------------------------------------*/

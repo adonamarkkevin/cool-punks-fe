@@ -1,0 +1,298 @@
+
+
+/*------------------------------------------
+          Contact Start Here
+-------------------------------------------*/
+
+.contact-main-dark{
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .wrapper{
+            .heading{
+                color: $White-Color;
+            }
+        }
+        .line{
+            display: flex;
+            flex: 1;
+            height: 1px;
+            background-color: $Dark-bg-tertiary;
+            margin: 36px 0 48px 0;
+        }
+        .row-contact{
+            align-items: center;
+            .col-contact-box{
+                .contact-box-inr{
+                    position: relative;
+                    background-color: $Dark-bg-quaternary;
+                    border-radius: 24px;
+                    padding: 72px 45px;
+                    overflow: hidden;
+                    @include breakpoint($secreen-xxs){
+                        padding: 45px 30px;
+                    }
+                    .box-address{
+                        position: relative;
+                        z-index: 2;
+                        .head{
+                            color: $White-Color;
+                            margin: 0 0 16px 0;
+                        }
+                        .desc{
+                            color: $Dark-Gray-Shade-1;
+                        }
+                        .icon-otr{
+                            margin: 56px 0 36px 0;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin: 48px 0 36px 0;
+                            }
+                            .icon-inr{
+                                display: flex;
+                                align-items: center;
+                                margin: 0 0 12px 0;
+                                .icon-inrr{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin: 0 16px 0 0;
+                                    .circle{
+                                        background-color: $Dark-bg-quaternary;
+                                        width: 52px;
+                                        height: 52px;
+                                        border-radius: 100%;
+                                    }
+                                    .icon{
+                                        position: absolute;
+                                        z-index: 2;
+                                    }
+                                }
+                                .head-icon{
+                                    color: $White-Color;
+                                }
+                            }
+                            .text{
+                                color: $Dark-Gray-Shade-1;
+                            }
+                        }
+                        .icon-main{
+                            display: flex;
+                            align-items: center;
+                            margin: 0 0 72px 0;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin: 0 0 48px 0;
+                            }
+                            .icon-otr-2{
+                                margin: 0 48px 0 0;
+                                @include breakpoint($secreen-xs){
+                                    margin: 0 0 36px 0;
+                                }
+                                .icon-inr{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 0 12px 0;
+                                    .icon-inrr{
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin: 0 16px 0 0;
+                                        .circle{
+                                            background-color: $Dark-bg-quaternary;
+                                            width: 52px;
+                                            height: 52px;
+                                            border-radius: 100%;
+                                        }
+                                        .icon{
+                                            position: absolute;
+                                            z-index: 2;
+                                        }
+                                    }
+                                    .head-icon{
+                                        color: $White-Color;
+                                    }
+                                }
+                                .text{
+                                    color: $Dark-Gray-Shade-1;
+                                }
+                            }
+                            .icon-otr-3{
+                                margin: 0;
+                            }
+                        }
+                        .social-icon-otr{
+                            .head-2{
+                                color: $White-Color;
+                            }
+                            .icon-ul{
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                .icon-li{
+                                    margin: 20px 0 0 0;
+                                    &:not(:last-child){
+                                        margin-right: 16px;
+                                    }
+                                    .icon-a{
+                                        .icon{
+                                            &:hover{
+                                                path{
+                                                    stroke: $Primary-Color-Home-1;
+                                                }
+                                            }
+                                            path{
+                                                transition: .3s;
+                                                stroke: $Dark-Gray-Shade-2;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-message-otr{
+                .col-message-inr{
+                    padding: 0 0 0 66px;
+                    @include breakpoint($secreen-max-md){
+                        padding: 72px 0 0 0;
+                    }
+                    .head{
+                        color: $White-Color;
+                    }
+                    .desc{
+                        color: $Dark-Gray-Shade-1;
+                        margin: 16px 0 40px 0;
+                    }
+                    .form-main{
+                        width: 50%;
+                        @include breakpoint($secreen-max-xxxl){
+                            width: 80%;
+                        }
+                        @include breakpoint($secreen-max-md){
+                            width: 100%;
+                        }
+                        .input-otr{
+                            margin: 0 0 30px 0;
+                            .input{
+                                width: 100%;
+                                background-color: $Dark-bg-quaternary;
+                                color: $Dark-Gray-Shade-2;
+                                &::placeholder{
+                                    color: $Dark-Gray-Shade-2; 
+                                }
+                            }
+                        }
+                        .input-otr{
+                            margin: 0 0 24px 0;
+                            .textarea{
+                                padding: 16px 24px;
+                                height: 190px;
+                                appearance: none;
+                                resize: none;
+                                background-color: $Dark-bg-quaternary;
+                                color: $Dark-Gray-Shade-2;
+                                &::placeholder{
+                                    color: $Dark-Gray-Shade-2; 
+                                }
+                            }
+                        }
+                        .input-otr{
+                            .select {
+                                cursor: pointer;
+                                display: inline-block;
+                                position: relative;
+                                width: 100%;
+                                .select-hidden {
+                                    display: none;
+                                    visibility: hidden;
+                                    padding-right: 10px;
+                                }
+                                .select-styled {
+                                    background-color: $Dark-bg-quaternary;
+                                    color: $Dark-Gray-Shade-2;
+                                    padding: 10px 24px;
+                                    border-radius: 16px;
+                                    font-size: $font-size-bs;
+                                    line-height: $line-height-bsb;
+                                    font-family: $font-family-DMSans-Bold;
+                                    &:after {
+                                        content:"";
+                                        width: 12px;
+                                        height: 10px;
+                                        position: absolute;
+                                        background-image: url(/assets/img/contact-page-arrow.svg);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        top: 21px;
+                                        right: 24px;
+                                    }
+                                    &:active, &.active {
+                                        &:after {
+                                            top: 21px;
+                                            border-color: transparent transparent $Gray-Shade-3 transparent;
+                                        }
+                                    }
+                                }
+                                .select-options {
+                                    display: none; 
+                                    position: absolute;
+                                    top: 130%;
+                                    width: 100%;
+                                    z-index: 999;
+                                    background-color: $Dark-Black-2-Color;
+                                    border-radius: 16px;
+                                    li {
+                                        font-size: $font-size-bs;
+                                        line-height: $line-height-bsb;
+                                        font-family: $font-family-DMSans-Bold;
+                                        color: $Dark-Gray-Shade-2;
+                                        margin: 0;
+                                        padding: 10px 24px;
+                                        border-radius: 16px;
+                                        transition: .3s;
+                                        &:hover {
+                                            color: $Dark-Gray-Shade-2;
+                                            background: $Dark-bg-quaternary;
+                                        }
+                                        &[rel="hide"] {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .action-otr{
+                            display: flex;
+                            .button{
+                                background-color: $Primary-Color-Home-1;
+                                color: $White-Color;
+                                width: 100%;
+                                padding: 10px 0;
+                                border-radius: 16px;
+                                border: none;
+                                @include site-transition;
+                                &:hover{
+                                    background-color: $Secondary-Color-Home-1;
+                                    color: $Black-Color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+          Contact End Here
+-------------------------------------------*/

@@ -1,0 +1,244 @@
+
+
+/*------------------------------------------
+        Blog Detail Start Here
+-------------------------------------------*/
+
+.blog-detail-main-dark{
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .row-detail{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .col-detail-otr{
+                .col-detail-inr{
+                    .head{
+                        color: $White-Color;
+                        @include breakpoint($secreen-max-xxl){
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .line{
+                width: 100%;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0;
+            }
+            .col-detail-otr-2{
+                .col-detail-inr-2{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: relative;
+                    background-color: $Dark-bg-quaternary;
+                    border-radius: 24px;
+                    padding: 56px 45px;
+                    overflow: hidden;
+                    margin: 0 0 40px 0;
+                    @include breakpoint($secreen-xs){
+                        padding: 28px;
+                    }
+                    .blog-img-otr{
+                        .blog-img-inr{
+                            @include breakpoint($secreen-max-sm){
+                                position: relative;
+                            }
+                            .img-box{
+                                position: relative;
+                                width: 430px;
+                                border-radius: 24px;
+                                margin: 0 0 24px 0;
+                                z-index: 2;
+                                @include breakpoint($secreen-xs){
+                                    width: 100%;
+                                }
+                            }
+                            .icon-main{
+                                position: absolute;
+                                right: 60px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                z-index: 2;
+                                @include breakpoint($secreen-max-sm){
+                                    right: -26px;
+                                    transform: translateY(-59%);
+                                }
+                                .icon-otr{
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    background-color: $Dark-bg-quaternary;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: relative;
+                                    cursor: pointer;
+                                    .icon{
+                                        path{
+                                            stroke: $Dark-Gray-Shade-2;
+                                        }
+                                    }
+                                    .share-hover{
+                                        position: absolute;
+                                        width: 330px;
+                                        height: 130px;
+                                        top: -150px;
+                                        left: 50%;
+                                        transform: translateX(-92%);
+                                        background-color: $Dark-Black-2-Color;
+                                        border-radius: 24px;
+                                        padding: 20px 28px 24px 28px;
+                                        z-index: 999;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                        text-align: center;
+                                        .heading{
+                                            color: $White-Color;
+                                            margin: 0 0 12px 0;
+                                        }
+                                        .icon-ul{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            width: 100%;
+                                            .icon-li{
+                                                .icon-a{
+                                                    &:hover{
+                                                        .icon{
+                                                            path{
+                                                                stroke: $Primary-Color-Home-1;
+                                                            }
+                                                        }
+                                                    }
+                                                    .icon{
+                                                        path{
+                                                            transition: .3s;
+                                                            stroke: $Dark-Gray-Shade-1;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .block-3{
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                }
+                                .icon-inr{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin: 16px 0 0 0;
+                                    .icon-flag{
+                                        position: absolute;
+                                    }
+                                    .circle{
+                                        width: 52px;
+                                        height: 52px;
+                                        background-color: $Dark-bg-quaternary;
+                                        border-radius: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .post-main{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 24px;
+                        padding: 24px 32px;
+                        width: 430px;
+                        position: relative;
+                        z-index: 2;
+                        @include breakpoint($secreen-xs){
+                            width: 100%;
+                        }
+                        .img-otr{
+                            display: flex;
+                            align-items: center;
+                            .post-by{
+                                border-radius: 16px;
+                                margin: 0 16px 0 0;
+                                width: 60px;
+                            }
+                            .content{
+                                display: flex;
+                                align-items:flex-start;
+                                justify-content: flex-start;
+                                flex-direction: column;
+                                .desc{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                                .desc-2{
+                                    color: $White-Color;
+                                }
+                            }
+                        }
+                        .date-otr{
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+                            flex-direction: column;
+                            @include breakpoint($secreen-max-sm){
+                                display: none;
+                            }
+                            .desc-3{
+                                color: $Primary-Color-Home-1;
+                            }
+                            .desc-4{
+                                color: $Dark-Gray-Shade-2;
+                            }
+                        }
+                    }
+                }
+                .col-detail-inr-3{
+                    .head-1{
+                        color: $White-Color;
+                        &:not(:first-child){
+                            margin: 24px 0 0 0;
+                        }
+                    }
+                    .desc{
+                        color: $Dark-Gray-Shade-1;
+                        margin: 16px 0 0 0;
+                    }
+                    .head-2{
+                        color: $White-Color;
+                        margin: 20px 0 0 0;
+                    }
+                    .desc-two{
+                        color: $Dark-Gray-Shade-1;
+                        margin: 12px 0 0 0;
+                    }
+                    .content-otr{
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 24px;
+                        padding: 28px 36px;
+                        margin: 28px 0 24px 0;
+                        .desc-inr{
+                            color: $Dark-Gray-Shade-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Blog Detail End Here
+-------------------------------------------*/

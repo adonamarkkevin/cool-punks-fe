@@ -1,0 +1,336 @@
+
+
+// Hpme 5
+
+
+/*------------------------------------------
+        Hero Section Start Here
+-------------------------------------------*/
+
+.hero-5-dark{
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 128px 0;
+    .nav-otr{
+        position: relative;
+        .container-fluid{
+            .nav-inr{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 32px 0;
+                @include breakpoint($secreen-max-md){
+                    padding: 24px 0;
+                }
+                .burger-menu{
+                    display: flex;
+                    align-items: center;
+                    .burger-icon-otr{
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 100%;
+                        background-color: $Dark-bg-quaternary;
+                        position: relative;
+                        margin-right: 12px;
+                        .burger-icon{
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            &:hover{
+                                cursor: pointer;
+                                path{
+                                    stroke: $Primary-Color-Home-1;
+                                }
+                            }
+                            path{
+                                stroke: $Gray-Shade-2;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    .logo-otr{
+                        .logo-img{
+                            width: 100px;
+                        }
+                    }
+                }
+                .input-main{
+                    position: relative;
+                    flex: 1;
+                    margin: 0 30px;
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 0 0 30px;
+                    }
+                    @include breakpoint($secreen-max-sm){
+                        display: none;
+                    }
+                    .input{
+                        width: 100%;
+                        padding-right: 52px;
+                        background-color: $Dark-bg-quaternary;
+                        color: $Dark-Gray-Shade-2;
+                        &::placeholder{
+                            color: $Dark-Gray-Shade-2;
+                        }
+                    }
+                    .search-icon{
+                        position: absolute;
+                        right: 24px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        path{
+                            stroke: $Dark-Gray-Shade-2;
+                        }
+                    }
+                }
+                .search-circle{
+                    width: 52px;
+                    height: 52px;
+                    background-color: $Dark-bg-quaternary;
+                    border-radius: 100%;
+                    position: relative;
+                    @include breakpoint($secreen-min-sm){
+                        display: none;
+                    }
+                    .search-icon{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        path{
+                            stroke: $Dark-Gray-Shade-2;
+                        }
+                    }
+                }
+                .modal-input{
+                    .modal-dialog-input{
+                        .modal-content-input{
+                            background-color: $Dark-bg-quaternary;
+                            border: none;
+                            width: 100%;
+                            .input-modal{
+                                background-color: $Dark-Black-2-Color;
+                                border: none;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .action-otr{
+                    display: flex;
+                    align-items: center;
+                    @include breakpoint($secreen-max-md){
+                        display: none;
+                    }
+                    .btn-create{
+                        margin-right: 16px;
+                    }
+                    .btn-wallet{
+                        color: $White-Color;
+                    }
+                }
+            }
+        }
+    }
+    .hero-inr{
+        padding: 128px 0;
+        background-size: cover;
+        background-position: center;
+        background-color: $Dark-Black-2-Color;
+        position: relative;
+        @include breakpoint($secreen-max-sm){
+            padding: 80px 0;
+        }
+        .row-custom{
+            align-items: center;
+            .col-carousel-otr{
+                .col-carousel-inr{
+                    .col-img-inr{
+                        position: relative;
+                        border-radius: 24px;
+                        .img1{
+                            border-radius: 24px;
+                        }
+                        .profile-otr{
+                            border-radius: 24px;
+                            background-color: $White-Color;
+                            position: absolute;
+                            left: 36px;
+                            bottom: 36px;
+                            @include breakpoint($secreen-max-sm){
+                                left: 24px;
+                                bottom: 24px;
+                            }
+                            @include breakpoint($secreen-xxs){
+                                border-radius: 18px;
+                            }
+                            .profile-inr{
+                                display: flex;
+                                align-items: center;
+                                flex-direction: row-reverse;
+                                padding: 20px;
+                                @include breakpoint($secreen-max-md){
+                                    flex-direction: row;
+                                }
+                                @include breakpoint($secreen-xxs){
+                                    left: 24px;
+                                    bottom: 24px;
+                                    flex-direction: column;
+                                    align-items: baseline;
+                                    padding: 4px;
+                                }
+                                .user-img{
+                                    border-radius: 16px;
+                                    .user-img-inr{
+                                        border-radius: 16px;
+                                        width: 60px;
+                                        height: 60px;
+                                    }
+                                }
+                                .username-otr{
+                                    margin-left: 16px;
+                                    text-align: left;
+                                    @include breakpoint($secreen-xxs){
+                                        display: none;
+                                    }
+                                    .user-info{
+                                        color: $Black-Color;
+                                    }
+                                    .username{
+                                        color: $Gray-Shade-2;
+                                        margin: -4px 0 0 0;
+                                        .link{
+                                            display: inline;
+                                            color: $Primary-Color-Home-1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-content-otr{
+                padding: 0 50px 0 65px;
+                @include breakpoint($secreen-max-lg){
+                    padding: 0 30px;
+                }
+                .col-content-inr{
+                    @include breakpoint($secreen-max-md){
+                        padding: 72px 0 0 0;
+                    }
+                    .heading{
+                        color: $White-Color;
+                    }
+                    .desc{
+                        color: $Dark-Gray-Shade-1;
+                        padding: 16px 0 36px 0;
+                    }
+                    .action-otr{
+                        display: flex;
+                        @include breakpoint($secreen-max-sm){
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                        }
+                        @include breakpoint($secreen-xxs){
+                            flex-direction: column;
+                        }
+                        .btn-create{
+                            margin-right: 16px;
+                            box-shadow: none;
+                            @include breakpoint($secreen-xxs){
+                                text-align: center;
+                                width: 100%;
+                                margin: 0 0 16px 0;
+                            }
+                        }
+                        .btn-wallet{
+                            color: $White-Color;
+                            box-shadow: none;
+                            @include breakpoint($secreen-xxs){
+                                text-align: center;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .shape-bg{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}   
+
+.hero-5-dark .owl-carousel .owl-stage-outer{
+    overflow: hidden !important;
+}
+.hero-5-dark .owl-carousel .owl-stage-outer .owl-item{
+    width: 550px !important;
+    @include breakpoint($secreen-max-sm){
+        width: 500px !important;
+    }
+    @include breakpoint($secreen-xs){
+        width: 400px !important;
+    }
+    @include breakpoint($secreen-xxs){
+        width: 300px !important;
+    }
+}
+.hero-5-dark .owl-theme .owl-nav{
+    top: 36px !important;
+    left: -36px !important;
+    @include breakpoint($secreen-max-md){
+        left: 50% !important;
+        transform: translateX(-50%);
+        text-align: center !important;
+    }
+}
+.hero-5-dark .owl-theme .owl-nav .owl-prev{
+    position: absolute;
+    right: 46px;
+    margin-right: 22px !important;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(25px) !important;
+    @include breakpoint($secreen-max-md){
+        position: initial;
+    }
+    img{
+        position: relative;
+        top: -2px;
+    }
+}
+.hero-5-dark .owl-theme .owl-nav .owl-prev:hover{
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(25px) !important;
+}
+.hero-5-dark .owl-theme .owl-nav .owl-next{
+    position: absolute;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(25px) !important;
+    @include breakpoint($secreen-max-md){
+        position: initial;
+    }
+    img{
+        position: relative;
+        top: -2px;
+    }
+}
+.hero-5-dark .owl-theme .owl-nav .owl-next:hover{
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(25px) !important;
+}
+
+/*------------------------------------------
+        Hero Section End Here
+-------------------------------------------*/

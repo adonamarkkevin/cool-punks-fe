@@ -1,0 +1,154 @@
+
+
+/*------------------------------------------
+        Explore Artworks Start Here
+-------------------------------------------*/
+
+.Help-center-main-dark{
+    overflow: hidden;
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .Help-center-inr{
+            .heading-otr{
+                .head-otr{
+                    display: flex;
+                    align-items: center;
+                    .heading{
+                        color: $White-Color;
+                    }
+                }
+            }
+            .tab-otr{
+                @include breakpoint($secreen-max-md){
+                    overflow-x: scroll;
+                }
+                &::-webkit-scrollbar {
+                    width: 100%;
+                    height: .1px;
+                    background-color: #EEEEEE;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #ACACAC;
+                    border-radius: 2px;
+                }
+                .tabs{
+                    display: flex;
+                    align-items: center;
+                    @include breakpoint($secreen-max-md){
+                        width: 875px;
+                    }
+                    .tab-link{
+                        margin-top: 24px;
+                        &:not(:last-child){
+                            margin-right: 24px;
+                        }
+                        .tab-p{
+                            padding: 4px 16px;
+                            border-radius: 12px;
+                            background-color: $Dark-bg-quaternary;
+                            color: $Dark-Gray-Shade-1;
+                            transition: .3s;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .active{
+                        .tab-p{
+                            background-color: $Primary-Color-Home-1;
+                            color: $White-Color;
+                        }
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 48px 0;
+            }
+            .row-custom-main{
+                .tab-content{
+                    display: none;
+                    opacity: 0;
+                    transform: translateY(15px);
+                    animation: fadeIn 0.5s ease 1 forwards;
+                    .row-question{
+                        .col-q-otr{
+                            .col-q-inr{
+                                .content-main{
+                                    .link{
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 16px 28px;
+                                        background-color: $Dark-bg-quaternary;
+                                        border-radius: 16px;
+                                        @include site-transition;
+                                        &:hover{
+                                            background-color: $Primary-Color-Home-1;
+                                            .icon-otr{
+                                                .text-icon{
+                                                    path{
+                                                        stroke: $White-Color;
+                                                    }
+                                                }
+                                            }
+                                            .text{
+                                                color: $White-Color;
+                                            }
+                                        }
+                                        .icon-otr{
+                                            width: 20px;
+                                            .text-icon{
+                                                path{
+                                                    stroke: $Primary-Color-Home-1;
+                                                    @include site-transition;
+                                                }
+                                            }
+                                        }
+                                        .text{
+                                            margin: 0 0 0 16px;
+                                            color: $White-Color;
+                                            @include site-transition;
+                                        }
+                                    }
+                                }
+                            }
+                            .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8{
+                                margin: 0 0 30px 0;
+                            }
+                            .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7,.box-8,.box-9{
+                                @include breakpoint($secreen-max-md){
+                                    margin: 0 0 30px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .active{
+                    display: block;
+                }
+                .col-btn-otr{
+                    .col-btn-inr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 72px 0 0 0;
+                        .head{
+                            color: $White-Color;
+                            margin: 0 24px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Explore Artworks End Here
+-------------------------------------------*/

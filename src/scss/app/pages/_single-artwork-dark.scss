@@ -1,0 +1,701 @@
+
+
+
+/*------------------------------------------
+        Hero Section Start Here
+-------------------------------------------*/
+
+.hero-single-artwork-dark{
+    overflow: hidden;
+    position: relative;
+    background-color: $Dark-bg-quaternary;
+    .container-fluid{
+        .hero-inr{
+            padding: 128px 0;
+            position: relative;
+            z-index: 10;
+            @include breakpoint($secreen-max-sm){
+                padding: 80px 0px 158px 0;
+            }
+            .img-otr{
+                width: 430px;
+                height: 430px;
+                border-radius: 24px !important;
+                margin: 0 auto;
+                position: relative;
+                z-index: 10;
+                overflow: hidden;
+                @include breakpoint($secreen-xs){
+                    width: 100%;
+                    height: auto;
+                }
+                .img-artwork{
+                    border-radius: 24px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .icons-div{
+                position: absolute;
+                right: 0;
+                bottom: 80px;
+                z-index: 10;
+                @include breakpoint($secreen-max-md){
+                    right: inherit;
+                    width: 100%;
+                }
+                @include breakpoint($secreen-md){
+                    bottom: 50px;
+                }
+                .icons-div-inr{
+                    display: flex;
+                    align-items: center;
+                    @include breakpoint($secreen-max-md){
+                        justify-content: center;
+                    }
+                    .heart-main{
+                        display: inline-flex;
+                        align-items: center;
+                        border: 1px solid $Dark-bg-tertiary;
+                        border-radius: 190px;
+                        .heart-otr{
+                            width: 52px;
+                            height: 52px;
+                            border-radius: 100%;
+                            margin-right: 12px;
+                            background-color: $Dark-bg-quaternary;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            .heart-icon{
+                                position: relative;
+                                top: 1px;
+                                path{
+                                    transition: .5s;
+                                }
+                            }
+                        }
+                        .num{
+                            color: $Dark-Gray-Shade-2;
+                            padding-right: 16px;
+                        }
+                    }
+                    .icon-div{
+                        &:not(:last-child){
+                            margin-right: 16px;
+                        }
+                    }
+                    .icon-otr{
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 100%;
+                        margin-right: 12px;
+                        background-color: $Dark-bg-quaternary;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        cursor: pointer;
+                        .icon{
+                            path{
+                                stroke: $Dark-Gray-Shade-2;
+                            }
+                        }
+                        .share-hover{
+                            position: absolute;
+                            width: 330px;
+                            height: 130px;
+                            top: -150px;
+                            left: 50%;
+                            transform: translateX(-92%);
+                            background-color: $Dark-bg-quaternary;
+                            border-radius: 24px;
+                            padding: 20px 28px 24px 28px;
+                            z-index: 999;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: .3s;
+                            text-align: center;
+                            .heading{
+                                color: $White-Color;
+                                margin: 0 0 12px 0;
+                            }
+                            .icon-ul{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                .icon-li{
+                                    .icon-a{
+                                        &:hover{
+                                            .icon{
+                                                path{
+                                                    stroke: $Primary-Color-Home-1;
+                                                }
+                                            }
+                                        }
+                                        .icon{
+                                            path{
+                                                transition: .3s;
+                                                stroke: $Dark-Gray-Shade-2;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .block-3{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Hero Section End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Artwork Body Start Here
+-------------------------------------------*/
+
+.artwork-body-dark{
+    margin: 72px 0;
+    .container-fluid{
+        .artwork-body-inr{
+            .row-custom{
+                position: relative;
+                .col-left-otr{
+                    .col-left-inr{
+                        position: sticky;
+                        top: 0;
+                        .user-main-otr{
+                            display: flex;
+                            align-items: center;
+                            .create-otr{
+                                position: relative;
+                                &:not(:last-child){
+                                    margin: 0 48px 0 0;
+                                }
+                                .create-inr{
+                                    display: flex;
+                                    align-items: center;
+                                    @include breakpoint($secreen-xxs){
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                    }
+                                    .create-img{
+                                        position: relative;
+                                        .img-create{
+                                            width: 60px;
+                                            border-radius: 16px;
+                                        }
+                                        .check-otr{
+                                            position: absolute;
+                                            bottom: 0;
+                                            right: 0;
+                                            width: 20px;
+                                            height: 20px;
+                                            background-color: $Primary-Color-Home-1;
+                                            border-radius: 100%;
+                                            border: 2px solid $White-Color;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            .check-icon{
+                                                width: 10px;
+                                            }
+                                        }
+                                    }
+                                    .create-content{
+                                        position: relative;
+                                        top: 1px;
+                                        margin-left: 16px;
+                                        @include breakpoint($secreen-xxs){
+                                            margin: 16px 0 0 0;
+                                        }
+                                        .create-p{
+                                            color: $Dark-Gray-Shade-2;
+                                        }
+                                        .create-pb{
+                                            color: $White-Color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .head{
+                            color: $White-Color;
+                            padding: 32px 0 16px 0;
+                        }
+                        .desc{
+                            color: $Dark-Gray-Shade-1;
+                        }
+                        .para1{
+                            padding: 0 0 16px 0;
+                        }
+                    }
+                }
+                .col-right-otr{
+                    .col-right-inr{
+                        padding-left: 85px;
+                        @include breakpoint($secreen-max-md){
+                            padding: 48px 0 0 0;
+                        }
+                        .bid-details{
+                            padding: 28px 36px 36px 36px;
+                            border-radius: 24px;
+                            background-color: $Dark-bg-quaternary;
+                            @include breakpoint($secreen-xs){
+                                padding: 0;
+                                border-radius: 0;
+                                background-color: transparent;
+                            }
+                            .bid-head{
+                                color: $White-Color;
+                            }
+                            .boxes-main{
+                                display: flex;
+                                margin: 24px 0 30px 0;
+                                @include breakpoint($secreen-max-xxxl){
+                                    flex-direction: column;
+                                }
+                                .bid-main{
+                                    padding: 24px 32px;
+                                    background-color: $Dark-bg-quaternary;
+                                    border-radius: 24px;
+                                    margin-right: 30px;
+                                    @include breakpoint($secreen-max-xxxl){
+                                        margin: 0 0 30px 0;
+                                    }
+                                    .bid{
+                                        color: $Dark-Gray-Shade-2;
+                                    }
+                                    .bid-head{
+                                        padding: 4px 0;
+                                        color: $White-Color;
+                                    }
+                                    .dollor{
+                                        color: $Dark-Gray-Shade-2;
+                                    }
+                                }
+                                .auction-main{
+                                    padding: 24px 32px;
+                                    background-color: $Dark-bg-quaternary;
+                                    border-radius: 24px;
+                                    .acution{
+                                        color: $Gray-Shade-2;
+                                    }
+                                    .timer{
+                                        display: flex;
+                                        .hours-main,.minutes-main,.seconds-main{
+                                            .time-inr{
+                                                color: $White-Color;
+                                                padding: 4px 0;
+                                            }
+                                            .hours-p,.minutes-p,.seconds-p{
+                                                color: $Dark-Gray-Shade-2;
+                                            }
+                                            .seconds-p{
+                                                @include breakpoint($secreen-xxsx){
+                                                    display: none;
+                                                }
+                                            }
+                                            .seconds-p-2{
+                                                display: none;
+                                                @include breakpoint($secreen-xxsx){
+                                                    display: block;
+                                                    color: $Dark-Gray-Shade-2;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .main{
+                                        &:not(:last-child){
+                                            margin-right: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                            .action-otr{
+                                .btn-bid{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .activity-details{
+                            padding: 28px 36px 36px 36px;
+                            border-radius: 24px;
+                            background-color: $Dark-bg-quaternary;
+                            margin: 30px 0 0 0;
+                            @include breakpoint($secreen-xs){
+                                padding: 0;
+                                border-radius: 0;
+                                background-color: transparent;
+                            }
+                            .activity-head{
+                                color: $White-Color;
+                                padding: 0 0 24px 0;
+                            }
+                            .place-bid-main{
+                                padding: 20px 24px;
+                                border-radius: 24px;
+                                background-color: $Dark-bg-quaternary;
+                                display: flex;
+                                align-items: center;
+                                &:not(:last-child){
+                                    margin-bottom: 24px;
+                                }
+                                .img-otr{
+                                    border-radius: 16px;
+                                    padding-right: 16px;
+                                    .img-creator{
+                                        width: 60px;
+                                        height: 60px;
+                                        border-radius: 16px;
+                                    }
+                                }
+                                .bid-content{
+                                    display: flex;
+                                    flex: 1;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    @include breakpoint($secreen-xs){
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                    }
+                                    .content-left{
+                                        @include breakpoint($secreen-xs){
+                                            margin: 0 0 4px 0;
+                                        }
+                                        .bid-otr{
+                                            .bid{
+                                                color: $Dark-Gray-Shade-1;
+                                            }
+                                            .by{
+                                                color: $Dark-Gray-Shade-2;
+                                            }
+                                            .user{
+                                                display: inline;
+                                                color: $Primary-Color-Home-1;
+                                            }
+                                        }
+                                        .date{
+                                            color: $Dark-Gray-Shade-2;
+                                        }
+                                    }
+                                    .content-right{
+                                        text-align: right;
+                                        @include breakpoint($secreen-xs){
+                                            display: flex;
+                                            align-items: center;
+                                        }
+                                        .eth{
+                                            color: $White-Color;
+                                            @include breakpoint($secreen-xs){
+                                                margin: 0 12px 0 0;
+                                            }
+                                        }
+                                        .dollor{
+                                            color: $Dark-Gray-Shade-1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Artwork Body End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Like This Start Here
+-------------------------------------------*/
+
+.like-this-dark{
+    overflow: hidden;
+    padding: 0 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 0 0 80px 0;
+    }
+    .container-fluid{
+        .live-auction-inr{
+            .heading-otr{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .head-otr{
+                    display: flex;
+                    align-items: center;
+                    .heading{
+                        color: $White-Color;
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0 48px 0;
+            }
+            .row-custom{
+                .col-otr{
+                    padding: 0 12px;
+                    @include breakpoint($secreen-max-xxl){
+                        width: 33%;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        width: 50%;
+                    }
+                    @include breakpoint($secreen-custom){
+                        width: 100%;
+                    }
+                    .col-inr{
+                        padding: 24px;
+                        border: 1px solid $Dark-bg-tertiary;
+                        border-radius: 24px;
+                        .img-otr{
+                            position: relative;
+                            border-radius: 16px;
+                            overflow: hidden;
+                            .img-inr{
+                                border-radius: 16px;
+                            }
+                            .timer-otr{
+                                position: absolute;
+                                bottom: 0;
+                                left: 3px;
+                                width: 120px;
+                                height: 40px;
+                                border: 1px solid $White-Color;
+                                background-color: $Primary-Color-Home-1;
+                                border-radius: 12px;
+                                .countdown{
+                                    position: absolute;
+                                    left: 65%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    color: $White-Color;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .time-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 24px 0 20px 0;
+                            .users-main{
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                .create-img-otr{
+                                    position: relative;
+                                    &:hover{
+                                        .hover-box1{
+                                            bottom: 40px;
+                                            padding-bottom: 25px;
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                        .hover-box2{
+                                            bottom: 40px;
+                                            padding-bottom: 25px;
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .create-img{
+                                        .img-create{
+                                            width: 40px;
+                                            border-radius: 12px;
+                                        }
+                                        .check-otr{
+                                            position: absolute;
+                                            bottom: 0;
+                                            right: 0;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-Color-Home-1;
+                                            border-radius: 100%;
+                                            border: 2px solid $White-Color;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            .check-icon{
+                                                width: 8px;
+                                            }
+                                        }
+                                        .check-otr-left{
+                                            right: 8px;
+                                        }
+                                    }
+                                    .left-create{
+                                        margin-right: 8px;
+                                    }
+                                    .hover-box{
+                                        position: absolute;
+                                        bottom: 60px;
+                                        padding-bottom: 50px;
+                                        transition: .3s;
+                                        z-index: 10;
+                                        .hover-box-inr{
+                                            width: 330px;
+                                            background-color: $Dark-Black-2-Color;
+                                            border-radius: 24px;
+                                            padding: 32px;
+                                            backdrop-filter: 15px;
+                                            .user-info{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+                                                .create-img{
+                                                    position: relative;
+                                                    .img-create{
+                                                        width: 60px;
+                                                        border-radius: 16px;
+                                                    }
+                                                    .check-otr{
+                                                        position: absolute;
+                                                        bottom: 0;
+                                                        right: 0;
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        background-color: $Primary-Color-Home-1;
+                                                        border-radius: 100%;
+                                                        border: 2px solid $White-Color;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        .check-icon{
+                                                            width: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                .follow-btn{
+                                                    width: auto;
+                                                    color: $White-Color;
+                                                    &:hover{
+                                                        box-shadow: none;
+                                                    }
+                                                }
+                                            }
+                                            .post-title{
+                                                padding: 20px 0 8px 0;
+                                                color: $White-Color;
+                                            }
+                                            .address-main{
+                                                display: inline-flex;
+                                                align-items: center;
+                                                padding: 0 0 16px 0;
+                                                .address{
+                                                    color: $Dark-Gray-Shade-2;
+                                                    padding-right: 8px;
+                                                }
+                                                .copy-icon{
+                                                    path{
+                                                        stroke: $Dark-Gray-Shade-1;
+                                                    }
+                                                }
+                                            }
+                                            .post-desc{
+                                                color: $Dark-Gray-Shade-1;
+                                            }
+                                        }
+                                    }    
+                                    .hover-box1{
+                                        left: -20px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include breakpoint($secreen-max-md){
+                                            display: none;
+                                        }
+                                    }
+                                    .hover-box2{
+                                        left: -70px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include breakpoint($secreen-max-md){
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .heart-main{
+                                display: flex;
+                                align-items: center;
+                                .heart-otr{
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 100%;
+                                    margin-right: 12px;
+                                    background-color: $Dark-bg-quaternary;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .heart-icon{
+                                        position: relative;
+                                        top: 1px;
+                                        path{
+                                            transition: .5s;
+                                        }
+                                    }
+                                }
+                                .num{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                            }
+                        }
+                        .box-head{
+                            color: $White-Color;
+                            padding: 0 0 24px 0;
+                            display: inline-flex;
+                            transition: .2s;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .bid-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 12px 20px;
+                            background-color: $Dark-bg-quaternary;
+                            border-radius: 16px;
+                            .bid{
+                                color: $Dark-Gray-Shade-2;
+                            }
+                            .eth{
+                                color: $White-Color;
+                            }
+                        }
+                    }
+                    .box1,.box2,.box3{
+                        @include breakpoint($secreen-max-xxl){
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Like This End Here
+-------------------------------------------*/

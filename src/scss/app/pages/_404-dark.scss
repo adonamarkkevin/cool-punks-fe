@@ -1,0 +1,40 @@
+
+
+/*------------------------------------------
+             404 Start Here
+-------------------------------------------*/
+
+.error-main-dark{
+    padding: 96px 0 128px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include breakpoint($secreen-max-sm){
+        padding: 48px 0 80px 0 !important;
+    }
+    .responsive-404{
+        display: none;
+        @include breakpoint($secreen-max-md){
+            display: block;
+        }
+        @include breakpoint($secreen-xs){
+            width: calc(100% - 100px);
+        }
+    }
+    .img-main{
+        width: 100%;
+        @include breakpoint($secreen-max-md){
+            display: none;
+        }
+    }
+    .heading{
+        color: $White-Color;
+        margin: 48px 0;
+        text-align: center;
+    }
+}
+
+/*------------------------------------------
+             404 End Here
+-------------------------------------------*/

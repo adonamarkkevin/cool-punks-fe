@@ -1,0 +1,118 @@
+
+
+/*------------------------------------------
+            Blog Start Here
+-------------------------------------------*/
+
+.letest-blog-dark{
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .latest-blog-inr{
+            .heading-otr{
+                .heading{
+                    color: $White-Color;
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0;
+            }
+            .row-custom{
+                .col-otr{
+                    padding: 0 12px;
+                    .col-inr{
+                        padding: 36px 36px 32px 36px;
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 24px;
+                        @include breakpoint($secreen-xxs){
+                            padding: 24px 24px 20px 24px;
+                        }
+                        .img-main{
+                            display: flex;
+                            align-items: center;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .img-otr{
+                                .img{
+                                    width: 150px;
+                                    height: 150px;
+                                    border-radius: 16px;
+                                    @include breakpoint($secreen-xs){
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                            .content{
+                                margin-left: 28px;
+                                @include breakpoint($secreen-xs){
+                                    margin: 32px 0 0 0;
+                                }
+                                .title-main{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 0 8px 0;
+                                    .title{
+                                        color: $Primary-Color-Home-1;
+                                    }
+                                    .dot{
+                                        margin: 0 8px;
+                                        color: $Dark-Gray-Shade-2;
+                                    }
+                                    .date{
+                                        color: $Dark-Gray-Shade-2;
+                                    }
+                                }
+                                .box-head{
+                                    color: $White-Color;
+                                    display: inline;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                    }
+                                }
+                            }
+                        }
+                        .desc{
+                            color: $Dark-Gray-Shade-1;
+                            padding: 24px 0 0 0;
+                        }
+                    }
+                    .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
+                        margin-bottom: 24px;
+                    }
+                    .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9{
+                        @include breakpoint($secreen-max-md){
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+                .col-btn-otr{
+                    .col-btn-inr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 48px 0 0 0;
+                        .btn-otr{
+                            .btn-post{
+                                color: $White-Color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Blog Start Here
+-------------------------------------------*/

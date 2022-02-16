@@ -1,0 +1,2358 @@
+
+
+.dark-bg{
+    background-color: $Dark-Black-Color;
+}
+
+/*----------------------------------
+        Modal Content
+----------------------------------*/
+
+.overlay-content-otr-dark{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.582);
+    transition: 0.2s;
+    .modal-content-custom{
+        width: 420px;
+        height: 100%;
+        background-color: $Dark-Black-Color;
+        position: relative;
+        left: -420px;
+        overflow-y: scroll;
+        filter: blur(5px);
+        transition: .5s;
+        @include breakpoint($secreen-xxs){
+            width: 100%;
+        }
+        &::-webkit-scrollbar{
+            width: 0.1px;
+        }
+        .overlay-content{
+            padding: 30px;
+            position: relative;
+            width: 100%;
+            .icon-close{
+                position: absolute;
+                top: 36px;
+                right: 30px;
+                z-index: 2;
+                &:hover{
+                    path{
+                        stroke: $Primary-Color-Home-1;
+                    }
+                    cursor: pointer;
+                }
+                path{
+                   stroke: $Dark-Gray-Shade-1;
+                   transition: .3s;
+                }
+            }
+            .logo-otr{
+                .logo-inr{
+                    .logo{
+                        width: 100px;
+                    }
+                }
+            }
+            .input-main{
+                position: relative;
+                margin: 32px 0;
+                .input{
+                    width: 100%;
+                    padding-right: 52px;
+                    background-color: $Dark-bg-quaternary;
+                    color: $Dark-Gray-Shade-2;
+                    &::placeholder{
+                        color: $Dark-Gray-Shade-2;
+                    }
+                }
+                .search-icon{
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .navigation-otr{
+                .navigation-inr{
+                    .nav-li{
+                        &:not(:last-child){
+                            margin-bottom: 8px;
+                        }
+                        .nav-a{
+                            display: inline;
+                            color: $White-Color;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                                cursor: pointer;
+                            }
+                        }
+                        .active-nav{
+                            color: $Primary-Color-Home-1;
+                        }
+                        .dropdown-otr{
+                            display: none;
+                            .dropdown-li{
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                .dropdown-a{
+                                    display: inline;
+                                    color: $White-Color;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .other-dropdown-otr{
+                                    padding: 8px 0 0 0;
+                                    display: none;
+                                    .other-dropdown-li{
+                                        &:not(:last-child){
+                                            margin-bottom: 8px;
+                                        }
+                                        .other-dropdown-a{
+                                            display: inline;
+                                            color: $White-Color;
+                                            transition: .3s;
+                                            &:hover{
+                                                color: $Primary-Color-Home-1;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .flex{
+                            display: block;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+            .action-otr{
+                text-align: center;
+                margin: 32px 0 12px 0;
+                .btn-create{
+                    margin-bottom: 16px;
+                }
+                .btn-wallet{
+                    color: $White-Color;
+                }
+            }
+            .icon-ul{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 0 72px 0;
+                .icon-li{
+                    margin-top: 20px;
+                    &:not(:last-child){
+                        margin-right: 20px;
+                    }
+                    .icon-a{
+                        .icon{
+                            &:hover{
+                                path{
+                                    stroke: $Primary-Color-Home-1;
+                                }
+                            }
+                            path{
+                                stroke: $Dark-Gray-Shade-2;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+            }
+            .language-selector{
+                display: flex;
+                .language-ul{
+                    .language-li{
+                        position: relative;
+                        .language-a{
+                            padding: 14px 24px;
+                            border: 1px solid $Dark-bg-tertiary;
+                            border-radius: 16px;
+                            display: flex;
+                            align-items: center;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            .flag-img{
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 100%;
+                            }
+                            .language{
+                                padding: 0 8px;
+                                color: $Dark-Gray-Shade-1;
+                            }
+                            .caret-down{
+                                position: relative;
+                                top: 1px;
+                                path{
+                                    stroke: $Dark-Gray-Shade-1;
+                                }
+                            }
+                        }
+                        .drop-ul{
+                            padding: 20px 24px;
+                            background-color: $Dark-Black-2-Color;
+                            border-radius: 16px;
+                            position: absolute;
+                            width: 100%;
+                            top: -164px;
+                            display: none;
+                            .drop-li{
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                .drop-a{
+                                    display: inline-flex;
+                                    align-items: center;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                    .flag-img{
+                                        width: 24px;
+                                        height: 24px;
+                                        border-radius: 100%;
+                                    }
+                                    .language{
+                                        padding-left: 8px;
+                                        color: $Dark-Gray-Shade-1;
+                                    }
+                                }
+                            }
+                        }
+                        .block{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .copy-name{
+                color: $Dark-Gray-Shade-1;
+                padding: 24px 0 12px 0;
+                .name{
+                    display: inline;
+                    color: $Primary-Color-Home-1;
+                }
+            }
+            .privacy-link{
+                display: flex;
+                align-items: center;
+                .link{
+                    color: $Dark-Gray-Shade-1;
+                    transition: .3s;
+                    &:hover{
+                        color: $Primary-Color-Home-1;
+                    }
+                }
+                .dot{
+                    color: $Dark-Gray-Shade-1;
+                    margin: 0 8px 0;
+                }
+            }
+        }
+    }
+    .active{
+        left: 0;
+        transition: .5s;
+        filter: blur(0);
+    }
+}
+.active-overlay-content-otr{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*----------------------------------
+        Modal Content
+----------------------------------*/
+
+/*------------------------------------------
+            Navbar Start Here
+-------------------------------------------*/
+
+.navbar-main-dark{
+    .container-fluid{
+        .navbar-inr{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 0;
+            @include breakpoint($secreen-max-md){
+                padding: 24px 0;
+            }
+            .logo-otr{
+                .logo-inr{
+                    .logo{
+                        width: 100px;
+                    }
+                }
+            }
+            .input-main{
+                position: relative;
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .input{
+                    width: 320px;
+                    padding-right: 52px;
+                    background-color: $Dark-bg-quaternary;
+                    color: $Dark-Gray-Shade-2;
+                    &::placeholder{
+                        color: $Dark-Gray-Shade-2;
+                    }
+                    @include breakpoint($secreen-max-xxl){
+                        width: 100%;
+                    }
+                    @include breakpoint($secreen-max-lg){
+                        width: 180px;
+                    }
+                }
+                .search-icon{
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .navigation-otr{
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .navigation-inr{
+                    display: flex;
+                    align-items: center;
+                    .nav-li{
+                        position: relative;
+                        &:not(:last-child){
+                            margin-right: 40px;
+                            @include breakpoint($secreen-max-lg){
+                                margin-right: 20px;
+                            }
+                        }
+                        &:hover{
+                            .dropdown-otr{
+                                top: 50px;
+                                opacity: 1;
+                                visibility: visible;
+                                filter: blur(0);
+                            }
+                        }
+                        .nav-a{
+                            color: $Dark-Gray-Shade-1;
+                            line-height: 50px;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .dropdown-otr{
+                            position: absolute;
+                            top: 100px;
+                            left: -24px;
+                            width: 220px;
+                            padding: 16px 24px;
+                            opacity: 0;
+                            visibility: hidden;
+                            background-color: $Dark-Black-2-Color;
+                            filter: blur(10px);
+                            border-radius: 24px;
+                            z-index: 20;
+                            transition: .5s;
+                            .dropdown-li{
+                                position: relative;
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                &:hover{
+                                    .other-dropdown-otr{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        top: -24px;
+                                        filter: blur(0);
+                                    }
+                                }
+                                .dropdown-a{
+                                    position: relative;
+                                    display: inline-flex;
+                                    color: $Dark-Gray-Shade-1;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                        padding-left: 16px;
+                                    }
+                                    &:hover::after{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        left: 0;
+                                    }
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $Primary-Color-Home-1;
+                                        top: 50%;
+                                        left: -16px;
+                                        transform: translateY(-50%);
+                                        border-radius: 50px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                    }
+                                }
+                                .other-dropdown-otr{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 170px;
+                                    width: 220px;
+                                    padding: 16px 24px;
+                                    background-color: $Dark-Black-2-Color;
+                                    filter: blur(10px);
+                                    border-radius: 24px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: .5s;
+                                    z-index: 30;
+                                    .other-dropdown-li{
+                                        position: relative;
+                                        &:not(:last-child){
+                                            margin-bottom: 8px;
+                                        }
+                                        .other-dropdown-a{
+                                            position: relative;
+                                            display: inline-flex;
+                                            color: $Dark-Gray-Shade-1;
+                                            transition: .3s;
+                                            &:hover{
+                                                color: $Primary-Color-Home-1;
+                                                padding-left: 16px;
+                                            }
+                                            &:hover::after{
+                                                opacity: 1;
+                                                visibility: visible;
+                                                left: 0;
+                                            }
+                                            &::after{
+                                                content: "";
+                                                position: absolute;
+                                                width: 8px;
+                                                height: 8px;
+                                                background-color: $Primary-Color-Home-1;
+                                                top: 50%;
+                                                left: -16px;
+                                                transform: translateY(-50%);
+                                                border-radius: 50px;
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: .3s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .action-otr{
+                display: flex;
+                align-items: center;
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .btn-create{
+                    margin-right: 16px;
+                }
+                .btn-wallet{
+                    color: $White-Color;
+                }
+            }
+            .burger-menu{
+                display: flex;
+                align-items: center;
+                display: none;
+                @include breakpoint($secreen-max-md){
+                    display: block;
+                }
+                .burger-icon-otr{
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 100%;
+                    background-color: $Dark-bg-quaternary;
+                    position: relative;
+                    margin-right: 12px;
+                    .burger-icon{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        &:hover{
+                            cursor: pointer;
+                            path{
+                                stroke: $Primary-Color-Home-1;
+                            }
+                        }
+                        path{
+                            stroke: $Dark-Gray-Shade-2;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Navbar End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Hero Section Start Here
+-------------------------------------------*/
+
+.hero-main-dark{
+    overflow: hidden;
+    position: relative;
+    background-color: $Dark-bg-quaternary;
+    margin: 0 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        margin: 0 0 80px 0;
+    }
+    .container-fluid{
+        padding: 0 100px !important;
+        @include breakpoint($secreen-max-xxxl){
+            padding: 0 50px !important;
+        }
+        @include breakpoint($secreen-max-md){
+            padding: 0 15px !important;
+        }
+        .hero-inr{
+            padding: 128px 0;
+            position: relative;
+            z-index: 10;
+            @include breakpoint($secreen-max-sm){
+                padding:80px 0;
+            }
+            .row-custom{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include breakpoint($secreen-xl2){
+                    flex-direction: column;
+                }
+                .col-img-otr{
+                    @include breakpoint($secreen-xl2){
+                        width: 50% !important;
+                    }
+                    @include breakpoint($secreen-max-xxl){
+                        width: 40% !important;
+                    }
+                    @include breakpoint($secreen-xl2){
+                        width: 60% !important;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        width: 80% !important;
+                    }
+                    @include breakpoint($secreen-max-sm){
+                        width: 100% !important;
+                    }
+                    .col-img-inr{
+                        position: relative;
+                        padding: 36px 36px 32px 36px;
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 24px;
+                        margin-right: 72px;
+                        @include breakpoint($secreen-max-xxl){
+                            margin-right: 0;
+                        }
+                        @include breakpoint($secreen-xs){
+                            padding: 28px 28px 24px 28px;
+                        }
+                        .img-otr{
+                            border-radius: 16px;
+                            overflow: hidden;
+                            .artwork-img{
+                                border-radius: 16px;
+                            }
+                        }
+                        .create-otr{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 24px 0 0 0;
+                            position: relative;
+                            .create-inr{
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                @include breakpoint($secreen-xs){
+                                    flex-direction: column;
+                                    align-items: baseline;
+                                }
+                                &:hover{
+                                    .hover-box{
+                                        bottom: 60px;
+                                        padding-bottom: 25px;
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                }
+                                .create-img{
+                                    position: relative;
+                                    .img-create{
+                                        width: 60px;
+                                        border-radius: 16px;
+                                        @include breakpoint($secreen-xs){
+                                            width: 52px;
+                                            border-radius: 12px;
+                                        }
+                                    }
+                                    .check-otr{
+                                        position: absolute;
+                                        bottom: 0;
+                                        right: 0;
+                                        width: 20px;
+                                        height: 20px;
+                                        background-color: $Primary-Color-Home-1;
+                                        border-radius: 100%;
+                                        border: 2px solid $White-Color;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .check-icon{
+                                            width: 10px;
+                                        }
+                                    }
+                                }
+                                .create-content{
+                                    position: relative;
+                                    top: 1px;
+                                    margin-left: 16px;
+                                    @include breakpoint($secreen-xs){
+                                        margin: 8px 0 0 0;
+                                    }
+                                    .create-p{
+                                        color: $Dark-Gray-Shade-2;
+                                    }
+                                    .create-pb{
+                                        color: $White-Color;
+                                        margin-top: -2px;
+                                    }
+                                }
+                            }
+                            .hover-box{
+                                position: absolute;
+                                bottom: 60px;
+                                left: 0;
+                                padding-bottom: 50px;
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: .3s;
+                                @include breakpoint($secreen-max-md){
+                                    display: none;
+                                }
+                                .hover-box-inr{
+                                    width: 330px;
+                                    background-color: $Dark-Black-2-Color;
+                                    border-radius: 24px;
+                                    padding: 32px;
+                                    .user-info{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        .create-img{
+                                            position: relative;
+                                            .img-create{
+                                                width: 60px;
+                                                border-radius: 16px;
+                                            }
+                                            .check-otr{
+                                                position: absolute;
+                                                bottom: 0;
+                                                right: 0;
+                                                width: 20px;
+                                                height: 20px;
+                                                background-color: $Primary-Color-Home-1;
+                                                border-radius: 100%;
+                                                border: 2px solid $White-Color;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                .check-icon{
+                                                    width: 10px;
+                                                }
+                                            }
+                                        }
+                                        .follow-btn{
+                                            width: auto;
+                                            color: $White-Color;
+                                            &:hover{
+                                                box-shadow: none;
+                                            }
+                                        }
+                                    }
+                                    .post-title{
+                                        padding: 20px 0 8px 0;
+                                        color: $White-Color;
+                                    }
+                                    .address-main{
+                                        display: inline-flex;
+                                        align-items: center;
+                                        padding: 0 0 16px 0;
+                                        .address{
+                                            color: $Dark-Gray-Shade-2;
+                                            padding-right: 8px;
+                                        }
+                                        .copy-icon{
+                                            path{
+                                                stroke: $Dark-Gray-Shade-1;
+                                            }
+                                        }
+                                    }
+                                    .post-desc{
+                                        color: $Dark-Gray-Shade-1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .col-content-otr{
+                    @include breakpoint($secreen-xl2){
+                        width: 80% !important;
+                        margin: 72px 0 0 0;
+                    }
+                    @include breakpoint($secreen-max-xxl){
+                        width: 60%;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        width: 100% !important;
+                    }
+                    .col-content-inr{
+                        .heading{
+                            color: $White-Color;
+                            @include breakpoint($secreen-xl2){
+                                text-align: center;
+                            }
+                            @include breakpoint($secreen-max-sm){
+                                text-align: left;
+                            }
+                        }
+                        .boxes-main{
+                            display: flex;
+                            margin: 32px 0 40px 0;
+                            @include breakpoint($secreen-xl2){
+                                justify-content: center;
+                            }
+                            @include breakpoint($secreen-max-sm){
+                                flex-direction: column;
+                            }
+                            .bid-main{
+                                padding: 24px 32px;
+                                background-color: $Dark-bg-quaternary;
+                                border-radius: 24px;
+                                margin-right: 30px;
+                                @include breakpoint($secreen-max-sm){
+                                    margin: 0 0 30px 0;
+                                }
+                                .bid{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                                .bid-head{
+                                    padding: 4px 0;
+                                    color: $White-Color;
+                                }
+                                .dollor{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                            }
+                            .auction-main{
+                                padding: 24px 32px;
+                                background-color: $Dark-bg-quaternary;
+                                border-radius: 24px;
+                                .acution{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                                .timer{
+                                    display: flex;
+                                    .hours-main,.minutes-main,.seconds-main{
+                                        .time-inr{
+                                            color: $White-Color;
+                                            padding: 4px 0;
+                                        }
+                                        .hours-p,.minutes-p,.seconds-p{
+                                            color: $Dark-Gray-Shade-2;
+                                        }
+                                    }
+                                }
+                                .main{
+                                    &:not(:last-child){
+                                        margin-right: 24px;
+                                    }
+                                }
+                            }
+                        }
+                        .action-otr{
+                            display: flex;
+                            @include breakpoint($secreen-xl2){
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            @include breakpoint($secreen-max-sm){
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                            }
+                            @include breakpoint($secreen-xxs){
+                                flex-direction: column;
+                            }
+                            .btn-create{
+                                margin-right: 16px;
+                                &:hover{
+                                    box-shadow: none;
+                                }
+                                @include breakpoint($secreen-xxs){
+                                    text-align: center;
+                                    width: 100%;
+                                    margin: 0 0 16px 0;
+                                }
+                            }
+                            .btn-wallet{
+                                color: $White-Color;
+                                &:hover{
+                                    box-shadow: none;
+                                }
+                                @include breakpoint($secreen-xxs){
+                                    text-align: center;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Hero Section End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Live Auction's Start Here
+-------------------------------------------*/
+
+.live-acution-dark{
+    overflow: hidden;
+    padding: 0 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 0 0 80px 0;
+    }
+    .container-fluid{
+        .live-auction-inr{
+            .heading-otr{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .head-otr{
+                    display: flex;
+                    align-items: center;
+                    .dot{
+                        display: flex;
+                        width: 24px;
+                        height: 24px;
+                        background-color: $Primary-Color-Home-1;
+                        border-radius: 100%;
+                        margin-right: 16px;
+                        @include dot-animation;
+                        animation: dot-animation 1s linear infinite;
+                    }
+                    .heading{
+                        color: $White-Color;
+                    }
+                }
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    transition: .3s;
+                    @include breakpoint($secreen-xs){
+                        display: none;
+                    }
+                    &:hover{
+                        .arrow-icon{
+                            margin-left: 16px;
+                        }
+                    }
+                    .View-p{
+                        color: $Primary-Color-Home-1;
+                    }
+                    .arrow-icon{
+                        transition: .3s;
+                        margin-left: 12px;
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0 48px 0;
+            }
+            .row-custom{
+                .col-otr{
+                    .col-inr{
+                        padding: 24px;
+                        border: 1px solid $Dark-bg-tertiary;
+                        border-radius: 24px;
+                        transition: .3s;
+                        .img-otr{
+                            position: relative;
+                            .img-inr{
+                                border-radius: 16px;
+                            }
+                            .timer-otr{
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 120px;
+                                height: 40px;
+                                border: 1px solid $White-Color;
+                                background-color: $Primary-Color-Home-1;
+                                border-radius: 12px;
+                                .countdown{
+                                    position: absolute;
+                                    left: 65%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    color: $White-Color;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .time-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 24px 0 20px 0;
+                            .users-main{
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                .create-img-otr{
+                                    position: relative;
+                                    &:hover{
+                                        .hover-box1{
+                                            bottom: 40px;
+                                            padding-bottom: 25px;
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                        .hover-box2{
+                                            bottom: 40px;
+                                            padding-bottom: 25px;
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .create-img{
+                                        .img-create{
+                                            width: 40px;
+                                            border-radius: 12px;
+                                        }
+                                        .check-otr{
+                                            position: absolute;
+                                            bottom: 0;
+                                            right: 0;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-Color-Home-1;
+                                            border-radius: 100%;
+                                            border: 2px solid $White-Color;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            .check-icon{
+                                                width: 8px;
+                                            }
+                                        }
+                                    }
+                                    .left-create{
+                                        margin-right: 8px;
+                                    }
+                                    .hover-box{
+                                        position: absolute;
+                                        bottom: 60px;
+                                        padding-bottom: 50px;
+                                        transition: .3s;
+                                        z-index: 10;
+                                        .hover-box-inr{
+                                            width: 330px;
+                                            background-color: $Dark-Black-2-Color;
+                                            border-radius: 24px;
+                                            padding: 32px;
+                                            backdrop-filter: 15px;
+                                            @include breakpoint($secreen-max-xxxxl){
+                                                width: 100%;
+                                            }
+                                            .user-info{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+                                                .create-img{
+                                                    position: relative;
+                                                    .img-create{
+                                                        width: 60px;
+                                                        border-radius: 16px;
+                                                    }
+                                                    .check-otr{
+                                                        position: absolute;
+                                                        bottom: 0;
+                                                        right: 0;
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        background-color: $Primary-Color-Home-1;
+                                                        border-radius: 100%;
+                                                        border: 2px solid $White-Color;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        .check-icon{
+                                                            width: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                .follow-btn{
+                                                    width: auto;
+                                                    color: $White-Color;
+                                                    &:hover{
+                                                        box-shadow: none;
+                                                    }
+                                                }
+                                            }
+                                            .post-title{
+                                                padding: 20px 0 8px 0;
+                                                color: $White-Color;
+                                            }
+                                            .address-main{
+                                                display: inline-flex;
+                                                align-items: center;
+                                                padding: 0 0 16px 0;
+                                                .address{
+                                                    color: $Dark-Gray-Shade-2;
+                                                    padding-right: 8px;
+                                                }
+                                                .copy-icon{
+                                                    path{
+                                                        stroke: $Dark-Gray-Shade-1;
+                                                    }
+                                                }
+                                            }
+                                            .post-desc{
+                                                color: $Dark-Gray-Shade-1;
+                                            }
+                                        }
+                                    }    
+                                    .hover-box1{
+                                        left: -20px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include breakpoint($secreen-max-md){
+                                            display: none;
+                                        }
+                                    }
+                                    .hover-box2{
+                                        left: -70px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include breakpoint($secreen-max-md){
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .heart-main{
+                                display: flex;
+                                align-items: center;
+                                .heart-otr{
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 100%;
+                                    margin-right: 12px;
+                                    background-color: $Dark-bg-quaternary;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .heart-icon{
+                                        position: relative;
+                                        top: 1px;
+                                        path{
+                                            transition: .5s;
+                                        }
+                                    }
+                                }
+                                .num{
+                                    color: $Dark-Gray-Shade-2;
+                                }
+                            }
+                        }
+                        .box-head{
+                            color: $White-Color;
+                            padding: 0 0 24px 0;
+                            display: inline-flex;
+                            transition: .2s;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .bid-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 12px 20px;
+                            background-color: $Dark-bg-quaternary;
+                            border-radius: 16px;
+                            .bid{
+                                color: $Dark-Gray-Shade-2;
+                            }
+                            .eth{
+                                color: $White-Color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.owl-stage-outer{
+    overflow: visible !important;
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background-color: transparent !important;
+}
+.owl-theme .owl-nav{
+    margin: 0 !important;
+    text-align: right !important;
+    position: absolute !important;
+    top: -122px !important;
+    width: 100% !important;
+}
+.owl-carousel .owl-stage{
+    transition: 1s ease-in-out !important;
+}
+.owl-theme .owl-nav [class*=owl-]{
+    margin: 0 !important;
+}
+.owl-carousel .owl-nav .owl-prev{
+    margin-right: 24px !important;
+}
+.selected{
+    path{
+        fill: #a83f39;
+        stroke: #a83f39;
+        transition: .5s;
+    }
+}
+
+.popular-collection-dark .owl-dots,
+.live-acution-dark .owl-dots,
+.live-acution-home2 .owl-dots{
+    margin-top: 48px !important;
+    padding-right: 0;
+}
+
+.live-acution-dark .owl-dots{
+    @include breakpoint($secreen-xxsx){
+        margin-top: 18px !important;
+    }
+}
+
+.live-acution-home2 .owl-dots{
+    @include breakpoint($secreen-xxsx){
+        margin-top: 18px !important;
+    }
+}
+
+.popular-collection-dark .owl-theme .owl-dots .owl-dot span,
+.live-acution-dark .owl-theme .owl-dots .owl-dot span,
+.live-acution-home2 .owl-theme .owl-dots .owl-dot span{
+    background: $Gray-Shade-3;
+}
+
+.popular-collection-dark .owl-theme .owl-dots .active span,
+.live-acution-dark .owl-theme .owl-dots .active span,
+.live-acution-home2 .owl-theme .owl-dots .active span{
+    background: $Primary-Color-Home-1;
+}
+
+/*------------------------------------------
+        Live Auction's End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Featured Creators Start Here
+-------------------------------------------*/
+
+.featured-creator-dark{
+    padding: 0 0 128px 0;
+    overflow: hidden;
+    @include breakpoint($secreen-max-sm){
+        padding: 0 0 80px 0;
+    }
+    .container-fluid{
+        .featured-creator-inr{
+            .heading-otr{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .head-otr{
+                    display: flex;
+                    align-items: center;
+                    .heading{
+                        color: $White-Color;
+                    }
+                }
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    transition: .3s;
+                    @include breakpoint($secreen-xs){
+                        display: none;
+                    }
+                    &:hover{
+                        .arrow-icon{
+                            margin-left: 16px;
+                        }
+                    }
+                    .View-p{
+                        color: $Primary-Color-Home-1;
+                    }
+                    .arrow-icon{
+                        transition: .3s;
+                        margin-left: 12px;
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: .5px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0 48px 0;
+            }
+            .row-custom{
+                .creator-otr{
+                    @include breakpoint($secreen-custom){
+                        width: 50%;
+                    }
+                    .create-inr{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        padding: 24px 0 16px 0;
+                        border-radius: 24px;
+                        border: 1px solid $Dark-bg-tertiary;
+                        .create-img{
+                            position: relative;
+                            .img-create{
+                                width: 60px;
+                                border-radius: 16px;
+                            }
+                            .check-otr{
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                width: 20px;
+                                height: 20px;
+                                background-color: $Primary-Color-Home-1;
+                                border-radius: 100%;
+                                border: 2px solid $White-Color;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .check-icon{
+                                    width: 10px;
+                                }
+                            }
+                        }
+                        .create-content{
+                            padding: 16px 0 0 0;
+                            .create-p{
+                                color: $Dark-Gray-Shade-2;
+                            }
+                            .create-pb{
+                                color: $White-Color;
+                            }
+                        }
+                    }
+                    .box1,.box2,.box3,.box4,.box5,.box6{
+                        margin-bottom: 24px;
+                    }
+                    .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9{
+                        @include breakpoint($secreen-max-sm){
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+            .responsive{
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    transition: .3s;
+                    &:hover{
+                        .arrow-icon{
+                            margin-left: 16px;
+                        }
+                    }
+                    .View-p{
+                        color: $Primary-Color-Home-1;
+                    }
+                    .arrow-icon{
+                        transition: .3s;
+                        margin-left: 12px;
+                    }
+                }
+                @include breakpoint($secreen-xs){
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 48px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Featured Creators End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Featured Artworks Start Here
+-------------------------------------------*/
+
+.featured-artwork-dark{
+    padding: 0 0 128px 0;
+    overflow: hidden;
+    @include breakpoint($secreen-max-sm){
+        padding: 0 0 80px 0;
+    }
+    .container-fluid{
+        .featured-artwork-inr{
+            .heading-otr{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .head-otr{
+                    display: flex;
+                    align-items: center;
+                    .heading{
+                        color: $White-Color;
+                    }
+                }
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    transition: .3s;
+                    @include breakpoint($secreen-xs){
+                        display: none;
+                    }
+                    &:hover{
+                        .arrow-icon{
+                            margin-left: 16px;
+                        }
+                    }
+                    .View-p{
+                        color: $Primary-Color-Home-1;
+                    }
+                    .arrow-icon{
+                        transition: .3s;
+                        margin-left: 12px;
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0 48px 0;
+            }
+            .row-custom{
+                .col-otr{
+                    padding: 0 12px;
+                    @include breakpoint($secreen-max-xxl){
+                        width: 33%;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        width: 50%;
+                    }
+                    @include breakpoint($secreen-custom){
+                        width: 100%;
+                    }
+                    .col-inr{
+                        padding: 24px;
+                        border: 1px solid $Dark-bg-tertiary;
+                        border-radius: 24px;
+                        .img-otr{
+                            position: relative;
+                            border-radius: 16px;
+                            overflow: hidden;
+                            .img-inr{
+                                border-radius: 16px;
+                            }
+                            .timer-otr{
+                                position: absolute;
+                                bottom: 0;
+                                left: 3px;
+                                width: 120px;
+                                height: 40px;
+                                border: 1px solid $White-Color;
+                                background-color: $Primary-Color-Home-1;
+                                border-radius: 12px;
+                                .countdown{
+                                    position: absolute;
+                                    left: 65%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    color: $White-Color;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .time-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 24px 0 20px 0;
+                            .users-main{
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                .create-img-otr{
+                                    position: relative;
+                                    &:hover{
+                                        .hover-box1{
+                                            bottom: 40px;
+                                            padding-bottom: 25px;
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                        .hover-box2{
+                                            bottom: 40px;
+                                            padding-bottom: 25px;
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    .create-img{
+                                        .img-create{
+                                            width: 40px;
+                                            border-radius: 12px;
+                                        }
+                                        .check-otr{
+                                            position: absolute;
+                                            bottom: 0;
+                                            right: 0;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: $Primary-Color-Home-1;
+                                            border-radius: 100%;
+                                            border: 2px solid $White-Color;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            .check-icon{
+                                                width: 8px;
+                                            }
+                                        }
+                                    }
+                                    .left-create{
+                                        margin-right: 8px;
+                                    }
+                                    .hover-box{
+                                        position: absolute;
+                                        bottom: 60px;
+                                        padding-bottom: 50px;
+                                        transition: .3s;
+                                        z-index: 10;
+                                        .hover-box-inr{
+                                            width: 330px;
+                                            background-color: $Dark-Black-2-Color;
+                                            border-radius: 24px;
+                                            padding: 32px;
+                                            backdrop-filter: 15px;
+                                            .user-info{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+                                                .create-img{
+                                                    position: relative;
+                                                    .img-create{
+                                                        width: 60px;
+                                                        border-radius: 16px;
+                                                    }
+                                                    .check-otr{
+                                                        position: absolute;
+                                                        bottom: 0;
+                                                        right: 0;
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        background-color: $Primary-Color-Home-1;
+                                                        border-radius: 100%;
+                                                        border: 2px solid $White-Color;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        .check-icon{
+                                                            width: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                .follow-btn{
+                                                    width: auto;
+                                                    color: $White-Color;
+                                                    &:hover{
+                                                        box-shadow: none;
+                                                    }
+                                                }
+                                            }
+                                            .post-title{
+                                                padding: 20px 0 8px 0;
+                                                color: $White-Color;
+                                            }
+                                            .address-main{
+                                                display: inline-flex;
+                                                align-items: center;
+                                                padding: 0 0 16px 0;
+                                                .address{
+                                                    color: $Dark-Gray-Shade-2;
+                                                    padding-right: 8px;
+                                                }
+                                                .copy-icon{
+                                                    path{
+                                                        stroke: $Dark-Gray-Shade-1;
+                                                    }
+                                                }
+                                            }
+                                            .post-desc{
+                                                color: $Dark-Gray-Shade-1;
+                                            }
+                                        }
+                                    }    
+                                    .hover-box1{
+                                        left: -20px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include breakpoint($secreen-max-md){
+                                            display: none;
+                                        }
+                                        
+                                    }
+                                    .hover-box2{
+                                        left: -70px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include breakpoint($secreen-max-md){
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .heart-main{
+                                display: flex;
+                                align-items: center;
+                                .heart-otr{
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 100%;
+                                    margin-right: 12px;
+                                    background-color: $Dark-bg-quaternary;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .heart-icon{
+                                        position: relative;
+                                        top: 1px;
+                                        path{
+                                            transition: .5s;
+                                        }
+                                    }
+                                }
+                                .num{
+                                    color: $Gray-Shade-2;
+                                }
+                            }
+                        }
+                        .box-head{
+                            color: $White-Color;
+                            padding: 0 0 24px 0;
+                            display: inline-flex;
+                            transition: .2s;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .bid-main{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 12px 20px;
+                            background-color: $Dark-bg-quaternary;
+                            border-radius: 16px;
+                            .bid{
+                                color: $Dark-Gray-Shade-2;
+                            }
+                            .eth{
+                                color: $White-Color;
+                            }
+                        }
+                    }
+                    .box1,.box2,.box3,.box4{
+                        margin-bottom: 24px;
+                    }
+                    .box1,.box2,.box3,.box4,.box5,.box6{
+                        @include breakpoint($secreen-max-md){
+                            margin-bottom: 24px;
+                        }
+                    }
+                    .box1,.box2,.box3,.box4,.box5,.box6,.box7{
+                        @include breakpoint($secreen-custom){
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+            .responsive{
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    transition: .3s;
+                    &:hover{
+                        .arrow-icon{
+                            margin-left: 16px;
+                        }
+                    }
+                    .View-p{
+                        color: $Primary-Color-Home-1;
+                    }
+                    .arrow-icon{
+                        transition: .3s;
+                        margin-left: 12px;
+                    }
+                }
+                @include breakpoint($secreen-xs){
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 48px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Featured Artworks End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Popular Collection Start Here
+-------------------------------------------*/
+
+.popular-collection-dark{
+    padding: 0 0 128px 0;
+    overflow: hidden;
+    @include breakpoint($secreen-max-sm){
+        padding: 0 0 80px 0;
+    }
+    .container-fluid{
+        .popular-collection-inr{
+            .heading-otr{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .head-otr{
+                    display: flex;
+                    align-items: center;
+                    .heading{
+                        color: $White-Color;
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 1px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0 48px 0;
+            }
+            .row-custom{
+                .col-otr{
+                    .col-inr{
+                        display: flex;
+                        align-items: center;
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 24px;
+                        @include breakpoint($secreen-xxs){
+                            flex-direction: column;
+                            align-items: baseline;
+                        }
+                        .img-otr{
+                            width: 200px;
+                            @include breakpoint($secreen-xxs){
+                                width: 100%;
+                            }
+                            .img-artwork{
+                                width: 100%;
+                                border-radius: 24px 0px 0px 24px;
+                                @include breakpoint($secreen-xxs){
+                                    border-radius: 24px 24px 0 0;
+                                }
+                            }
+                        }
+                        .content{
+                            margin-left: 32px;
+                            position: relative;
+                            top: 6px;
+                            @include breakpoint($secreen-xxs){
+                                padding: 24px 24px 16px 24px;
+                                margin: 0;
+                                top: 0;
+                            }
+                            .create-img{
+                                position: relative;
+                                width: 60px;
+                                .img-create{
+                                    width: 60px;
+                                    border-radius: 16px;
+                                }
+                                .check-otr{
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-color: $Primary-Color-Home-1;
+                                    border-radius: 100%;
+                                    border: 2px solid $White-Color;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .check-icon{
+                                        width: 10px;
+                                    }
+                                }
+                            }
+                            .art-title{
+                                padding: 16px 0 0 0;
+                                color: $White-Color;
+                                transition: .2s;
+                                &:hover{
+                                    color: $Primary-Color-Home-1;
+                                }
+                            }
+                            .by-otr{
+                                color: $Primary-Color-Home-1;
+                                .by{
+                                    color: $Dark-Gray-Shade-1;
+                                    display: inline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Popular Collection End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Call to Action Start Here
+-------------------------------------------*/
+
+.call-to-action{
+    margin: 0 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        margin: 0 0 80px 0;
+    }
+    .container-fluid{
+        .call-to-action-inr{
+            border-radius: 24px;
+            background-image: url('/assets/img/cta-img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            .overlay{
+                position: relative;
+                padding: 96px 72px 104px 72px;
+                @include breakpoint($secreen-xs){
+                    padding: 48px 28px 56px 28px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 24px;
+                    background-color: $Black-Color;
+                    opacity: 15%;
+                }
+                .content{
+                    position: relative;
+                    z-index: 2;
+                    .heading{
+                        color: $White-Color;
+                        @include breakpoint($secreen-max-sm){
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                    .desc{
+                        color: $White-Color;
+                        padding: 16px 0 32px 0;
+                        @include breakpoint($secreen-max-sm){
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                    .action-otr{
+                        display: flex;
+                        @include breakpoint($secreen-xs){
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        .btn-create{
+                            @include breakpoint($secreen-xs){
+                                margin: 0 0 16px 0;
+                            }
+                            margin-right: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Call to Action End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Letest Blog's Start Here
+-------------------------------------------*/
+
+.letest-blog-main-dark{
+    padding: 0 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 0 0 80px 0;
+    }
+    .container-fluid{
+        .latest-blog-inr{
+            .heading-otr{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .heading{
+                    color: $White-Color;
+                }
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    transition: .3s;
+                    @include breakpoint($secreen-xs){
+                        display: none;
+                    }
+                    &:hover{
+                        .arrow-icon{
+                            margin-left: 16px;
+                        }
+                    }
+                    .View-p{
+                        color: $Primary-Color-Home-1;
+                    }
+                    .arrow-icon{
+                        transition: .3s;
+                        margin-left: 12px;
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 0.5px;
+                background-color: $Dark-bg-tertiary;
+                margin: 36px 0 48px 0;
+            }
+            .row-custom{
+                .col-otr{
+                    padding: 0 12px;
+                    .col-inr{
+                        padding: 36px 36px 32px 36px;
+                        background-color: $Dark-bg-quaternary;
+                        border-radius: 24px;
+                        transition: .3s;
+                        @include breakpoint($secreen-xs){
+                            padding: 28px;
+                        }
+                        .img-main{
+                            display: flex;
+                            align-items: center;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                            .img-otr{
+                                .img{
+                                    width: 150px;
+                                    height: 150px;
+                                    border-radius: 16px;
+                                    @include breakpoint($secreen-xs){
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                            .content{
+                                margin-left: 28px;
+                                @include breakpoint($secreen-xs){
+                                    margin: 28px 0 0 0;
+                                }
+                                .title-main{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 0 8px 0;
+                                    .title{
+                                        color: $Primary-Color-Home-1;
+                                        &:hover{
+                                            cursor: pointer;
+                                        }
+                                    }
+                                    .dot{
+                                        margin: 0 8px;
+                                        color: $Dark-Gray-Shade-2;
+                                    }
+                                    .date{
+                                        color: $Dark-Gray-Shade-2;
+                                        &:hover{
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                                .box-head{
+                                    color: $White-Color;
+                                    display: inline;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                    }
+                                }
+                            }
+                        }
+                        .desc{
+                            color: $Dark-Gray-Shade-2;
+                            padding: 12px 0 0 0;
+                        }
+                    }
+                    .box1,.box2{
+                        margin-bottom: 24px;
+                    }
+                    .box1,.box2,.box3{
+                        @include breakpoint($secreen-max-md){
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+            .responsive{
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+                .view-all{
+                    display: flex;
+                    align-items: center;
+                    transition: .3s;
+                    &:hover{
+                        .arrow-icon{
+                            margin-left: 16px;
+                        }
+                    }
+                    .View-p{
+                        color: $Primary-Color-Home-1;
+                    }
+                    .arrow-icon{
+                        transition: .3s;
+                        margin-left: 12px;
+                    }
+                }
+                @include breakpoint($secreen-xs){
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 48px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Letest Blog's Start Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Footer Section Start Here
+-------------------------------------------*/
+
+.footer-main-dark{
+    padding: 128px 0;
+    background-color: $Dark-bg-quaternary;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint($secreen-max-sm){
+        padding: 80px 0;
+    }
+    .container-fluid{
+        .row-custom{
+            position: relative;
+            z-index: 10;
+            .col-log-otr{
+                .col-logo-inr{
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 0 28px 0;
+                    }
+                    .logo-otr{
+                        display: inline-flex;
+                        .logo-img{
+                            width: 100px;
+                        }
+                    }
+                    .icon-ul{
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        .icon-li{
+                            margin-top: 28px;
+                            &:not(:last-child){
+                                margin-right: 20px;
+                            }
+                            .icon-a{
+                                .icon{
+                                    &:hover{
+                                        path{
+                                            stroke: $Primary-Color-Home-1;
+                                        }
+                                    }
+                                    path{
+                                        stroke: $Dark-Gray-Shade-2;
+                                        transition: .5s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-nav-otr{
+                .col-nav-inr{
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 0 48px 0;
+                    }
+                    .nav-head{
+                        color: $White-Color;
+                        padding: 0 0 16px 0;
+                    }
+                    .nav-ul{
+                        .nav-li{
+                            &:not(:last-child){
+                                margin-bottom: 8px;
+                            }
+                            .nav-a{
+                                display: inline;
+                                color: $Dark-Gray-Shade-1;
+                                transition: .3s;
+                                &:hover{
+                                    color: $Primary-Color-Home-1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-explore-otr{
+                .col-explore-inr{
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 0 48px 0;
+                    }
+                    .explore-head{
+                        color: $White-Color;
+                        padding: 0 0 16px 0;
+                    }
+                    .explore-ul{
+                        .explore-li{
+                            &:not(:last-child){
+                                margin-bottom: 8px;
+                            }
+                            .explore-a{
+                                display: inline;
+                                color: $Dark-Gray-Shade-1;
+                                transition: .3s;
+                                &:hover{
+                                    color: $Primary-Color-Home-1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-community-otr{
+                .col-community-inr{
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 0 48px 0;
+                    }
+                    .community-head{
+                        color: $White-Color;
+                        padding: 0 0 16px 0;
+                    }
+                    .community-ul{
+                        .community-li{
+                            &:not(:last-child){
+                                margin-bottom: 8px;
+                            }
+                            .community-a{
+                                display: inline;
+                                color: $Dark-Gray-Shade-1;
+                                transition: .3s;
+                                &:hover{
+                                    color: $Primary-Color-Home-1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-subscribe-otr{
+                .col-subscribe-inr{
+                    .sub-head{
+                        color: $White-Color;
+                    }
+                    .input{
+                        width: 100%;
+                        margin: 24px 0;
+                        background-color: $Dark-bg-quaternary;
+                        color: $Dark-Gray-Shade-2;
+                        &::placeholder{
+                            color: $Dark-Gray-Shade-2;
+                        }
+                    }
+                    .btn-subscribe{
+                        border: none;
+                        &:hover{
+                            box-shadow: none;
+                        }
+                        &:focus{
+                            box-shadow: none;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Footer Section End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Copy Section Start Here
+-------------------------------------------*/
+
+.copy-otr-dark{
+    position: relative;
+    z-index: 10;
+    .container-fluid{
+        .copy-inr{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0;
+            @include breakpoint($secreen-max-md){
+                flex-direction: column;
+                justify-content: center;
+                padding: 24px 0 16px 0;
+            }
+            .language-selector{
+                .language-ul{
+                    .language-li{
+                        position: relative;
+                        .language-a{
+                            padding: 9px 24px;
+                            border: 1px solid $Dark-bg-tertiary;
+                            border-radius: 16px;
+                            display: flex;
+                            align-items: center;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            .flag-img{
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 100%;
+                            }
+                            .language{
+                                padding: 0 8px;
+                                color: $Dark-Gray-Shade-1;
+                            }
+                            .caret-down{
+                                position: relative;
+                                top: 1px;
+                                path{
+                                    stroke: $Dark-Gray-Shade-1;
+                                }
+                            }
+                        }
+                        .drop-ul{
+                            padding: 20px 24px;
+                            background-color: $Dark-Black-2-Color;
+                            border-radius: 16px;
+                            position: absolute;
+                            width: 100%;
+                            top: -164px;
+                            display: none;
+                            .drop-li{
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                .drop-a{
+                                    display: inline-flex;
+                                    align-items: center;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                    .flag-img{
+                                        width: 24px;
+                                        height: 24px;
+                                        border-radius: 100%;
+                                    }
+                                    .language{
+                                        color: $Dark-Gray-Shade-1;
+                                        padding-left: 8px;
+                                    }
+                                }
+                            }
+                        }
+                        .block{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .copy-name{
+                color: $Dark-Gray-Shade-1;
+                text-align: center;
+                @include breakpoint($secreen-max-md){
+                    margin: 16px 0 8px 0;
+                }
+                .name{
+                    display: inline;
+                    color: $Primary-Color-Home-1;
+                }
+            }
+            .privacy-link{
+                display: flex;
+                align-items: center;
+                .link{
+                    color: $Dark-Gray-Shade-1;
+                    transition: .3s;
+                    &:hover{
+                        color: $Primary-Color-Home-1;
+                    }
+                }
+                .dot{
+                    color: $Dark-Gray-Shade-1;
+                    margin: 0 8px 0;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+        Copy Section End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+        Site loader Start Here
+-------------------------------------------*/
+
+.progressjs-theme-blueOverlay .progressjs-percent{
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
+    font-family: $font-family-DMSans-Bold;
+    color: $White-Color;
+}
+
+.loader{
+    width: 100%;
+    height: 100vh;
+    background-color: $Gray-Shade-4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+}
+
+/*------------------------------------------
+        Site loader End Here
+-------------------------------------------*/

@@ -1,0 +1,245 @@
+
+
+.nav-home6-dark{
+    .container-fluid{
+        .nav-inr{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 0;
+            @include breakpoint($secreen-max-md){
+                padding: 24px 0;
+            }
+            .burger-menu{
+                display: flex;
+                align-items: center;
+                .burger-icon-otr{
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 100%;
+                    background-color: $Dark-bg-quaternary;
+                    position: relative;
+                    margin-right: 12px;
+                    .burger-icon{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        &:hover{
+                            cursor: pointer;
+                            path{
+                                stroke: $Primary-Color-Home-1;
+                            }
+                        }
+                        path{
+                            stroke: $Gray-Shade-2;
+                            transition: .3s;
+                        }
+                    }
+                }
+                .logo-otr{
+                    .logo-img{
+                        width: 100px;
+                    }
+                }
+            }
+            .input-main{
+                position: relative;
+                flex: 1;
+                margin: 0 30px;
+                @include breakpoint($secreen-max-md){
+                    margin: 0 0 0 30px;
+                }
+                @include breakpoint($secreen-max-sm){
+                    display: none;
+                }
+                .input{
+                    width: 100%;
+                    padding-right: 52px;
+                    background-color: $Dark-bg-quaternary;
+                    color: $Dark-Gray-Shade-2;
+                    &::placeholder{
+                        color: $Dark-Gray-Shade-2;
+                    }
+                }
+                .search-icon{
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    path{
+                        stroke: $Dark-Gray-Shade-2;
+                    }
+                }
+            }
+            .search-circle{
+                width: 52px;
+                height: 52px;
+                background-color: $Dark-bg-quaternary;
+                border-radius: 100%;
+                position: relative;
+                @include breakpoint($secreen-min-sm){
+                    display: none;
+                }
+                .search-icon{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    path{
+                        stroke: $Dark-Gray-Shade-2;
+                    }
+                }
+            }
+            .modal-input{
+                .modal-dialog-input{
+                    .modal-content-input{
+                        background-color: $Dark-bg-quaternary;
+                        border: none;
+                        width: 100%;
+                        .input-modal{
+                            background-color: $Dark-Black-2-Color;
+                            border: none;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .action-otr{
+                display: flex;
+                align-items: center;
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .btn-create{
+                    margin-right: 16px;
+                }
+                .btn-wallet{
+                    color: $White-Color;
+                }
+            }
+        }
+    }
+}
+
+.hero-6-dark{
+    background-size: cover;
+    background-color: $Dark-Black-2-Color;
+    padding: 128px 0 300px 0;
+    margin: 0 0 128px 0;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint($secreen-max-sm){
+        padding: 80px 0 260px 0;
+    }
+    .container-fluid{
+        .wrapper{
+            .col-otr{
+                margin: 0 auto;
+                .col-inr{
+                    padding: 110px 0;
+                    position: relative;
+                    z-index: 10;
+                    @include breakpoint($secreen-max-md){
+                        padding: 0;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 700px;
+                        height: 100%;
+                        background-image: url('/assets/img/hero6-img.jpg');
+                        border-radius: 24px;
+                        z-index: -1;
+                        @include breakpoint($secreen-max-lg){
+                            width: 600px;
+                        }
+                        @include breakpoint($secreen-max-md){
+                            display: none;
+                        }
+                    }
+                    .heading{
+                        padding: 28px 40px;
+                        border-radius: 16px;
+                        color: $White-Color;
+                        background-color: rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(250px);
+                        display: inline-block;
+                        @include breakpoint($secreen-max-md){
+                            display: block;
+                        }
+                        @include breakpoint($secreen-max-sm){
+                            background-color: transparent;
+                            backdrop-filter: blur(0);
+                            padding: 0;
+                        }
+                    }
+                    .desc{
+                        color: $Dark-Gray-Shade-1;
+                        padding: 32px 0 32px 40px;
+                        @include breakpoint($secreen-max-sm){
+                            padding: 16px 0 24px 0;
+                        }
+                    }
+                    .action-otr{
+                        display: flex;
+                        padding: 0 0 0 36px;
+                        @include breakpoint($secreen-max-sm){
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                        }
+                        @include breakpoint($secreen-max-sm){
+                            padding: 0 0 0 0;
+                        }
+                        @include breakpoint($secreen-xxs){
+                            flex-direction: column;
+                        }
+                        .btn-create{
+                            margin-right: 16px;
+                            box-shadow: none;
+                            @include breakpoint($secreen-xxs){
+                                text-align: center;
+                                width: 100%;
+                                margin: 0 0 16px 0;
+                            }
+                        }
+                        .btn-wallet{
+                            color: $White-Color;
+                            box-shadow: none;
+                            @include breakpoint($secreen-xxs){
+                                text-align: center;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ethoz-div{
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+        .ethoz-ul{
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            .ethoz-li{
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+                font-size: 100px;
+                line-height: 130px;
+                color: $White-Color;
+                opacity: 7%;
+                text-transform: uppercase;
+                font-style: italic;
+                font-family: $font-family-DMSans-Bold;
+                margin: 0 0 -60px 0;
+            }
+        }
+    }
+}

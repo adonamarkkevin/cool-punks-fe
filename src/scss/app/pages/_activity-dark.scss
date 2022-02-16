@@ -1,0 +1,135 @@
+
+
+/*------------------------------------------
+          Activity Start Here
+-------------------------------------------*/
+
+.activity-main-dark{
+    overflow: hidden;
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .heading-main{
+            .heading{
+                color: $White-Color;
+            }
+        }
+        .line{
+            display: flex;
+            flex: 1;
+            height: 1px;
+            background-color: $Dark-bg-tertiary;
+            margin: 36px 0 48px 0;
+        }
+        .row-activity{
+            @include breakpoint($secreen-max-md){
+                flex-direction: column-reverse;
+            }
+            .col-box-otr{
+                .col-box-inr{
+                    .box{
+                        display: flex;
+                        align-items: center;
+                        background-color: $Dark-bg-quaternary;
+                        padding: 28px;
+                        border-radius: 24px;
+                        @include breakpoint($secreen-xs){
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        &:not(:last-child){
+                            margin: 0 0 30px 0;
+                        }
+                        .img{
+                            width: 108px;
+                            border-radius: 16px;
+                            margin: 0 24px 0 0;
+                            @include breakpoint($secreen-xs){
+                                margin: 0 0 24px 0;
+                            }
+                        }
+                        .content-otr{
+                            .head{
+                                color: $White-Color;
+                            }
+                            .linkk{
+                                display: inline-flex;
+                                flex-wrap: wrap;
+                                color: $Dark-Gray-Shade-1;
+                                margin: 4px 0;
+                                .linkk-inr{
+                                    color: $Dark-Gray-Shade-2;
+                                    margin: 0 4px;
+                                }
+                                .user{
+                                    color: $Primary-Color-Home-1;
+                                    @include site-transition;
+                                    &:hover{
+                                        color: $Black-Color;
+                                    }
+                                }
+                            }
+                            .desc{
+                                color: $Dark-Gray-Shade-2;
+                            }
+                        }
+                    }
+                }
+                .action-otr{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 48px 0 0 0;
+                    .btn-activity{
+                        color: $White-Color;
+                    }
+                }
+            }
+            .filter-otr{
+                @include breakpoint($secreen-max-md){
+                    margin: 0 0 72px 0;
+                }
+                .filter-inr{
+                    padding: 0 0 0 57px;
+                    @include breakpoint($secreen-max-md){
+                        padding: 0;
+                    }
+                    .head-filter{
+                        color: $White-Color;
+                        margin: 0 0 24px 0;
+                    }
+                    .filter{
+                        display: flex;
+                        flex-wrap: wrap;
+                        .filter-btn{
+                            margin: 0 24px 24px 0;
+                            .button{
+                                color: $Dark-Gray-Shade-1 !important;
+                                background-color: $Dark-bg-quaternary !important;
+                                backdrop-filter: blur(15px);
+                                border-radius: 12px;
+                                padding: 4px 16px !important;
+                                border: none;
+                                transition: .3s;
+                            }
+                            .filter-active{
+                                background-color: $Primary-Color-Home-1 !important;
+                                color: $White-Color !important;
+                            }
+                        }
+                    }
+                    .clear-filter{
+                        color: $Primary-Color-Home-1;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+          Activity End Here
+-------------------------------------------*/

@@ -1,0 +1,672 @@
+
+
+
+
+
+/*------------------------------------------
+            Navbar Start Here
+-------------------------------------------*/
+
+.navbar-main-2-inner{
+    .container-fluid{
+        .navbar-inr-2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 0;
+            .burger-menu{
+                display: flex;
+                align-items: center;
+                .burger-icon-otr{
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 100%;
+                    background-color: $Gray-Shade-4;
+                    position: relative;
+                    margin-right: 12px;
+                    display: none;
+                    @include breakpoint ($secreen-max-md){
+                        display: block;
+                    }
+                    @include breakpoint($secreen-xxs){
+                        width: 44px;
+                        height: 44px;
+                    }
+                    .burger-icon{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        &:hover{
+                            cursor: pointer;
+                            path{
+                                stroke: $Primary-Color-Home-1;
+                            }
+                        }
+                        path{
+                            stroke: $Gray-Shade-2;
+                            transition: .3s;
+                        }
+                    }
+                }
+                .logo-otr{
+                    .logo-img{
+                        width: 100px;
+                    }
+                }
+            }
+            .input-main{
+                position: relative;
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .input{
+                    width: 320px;
+                    padding-right: 52px;
+                    @include breakpoint($secreen-max-xxxl){
+                        width: 100%;
+                    }
+                    @include breakpoint($secreen-max-lg){
+                        width: 180px;
+                    }
+                }
+                .search-icon{
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .navigation-otr{
+                @include breakpoint($secreen-max-md){
+                    display: none;
+                }
+                .navigation-inr{
+                    display: flex;
+                    align-items: center;
+                    .nav-li{
+                        position: relative;
+                        &:not(:last-child){
+                            margin-right: 40px;
+                            @include breakpoint($secreen-max-lg){
+                                margin-right: 20px;
+                            }
+                        }
+                        &:hover{
+                            .dropdown-otr{
+                                top: 50px;
+                                opacity: 1;
+                                visibility: visible;
+                                filter: blur(0);
+                            }
+                        }
+                        .nav-a{
+                            color: $Gray-Shade-1;
+                            line-height: 50px;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .dropdown-otr{
+                            position: absolute;
+                            top: 100px;
+                            left: -24px;
+                            width: 220px;
+                            padding: 16px 24px;
+                            opacity: 0;
+                            visibility: hidden;
+                            background-color: $White-Color;
+                            box-shadow: $box-shadow-custom;
+                            filter: blur(10px);
+                            border-radius: 24px;
+                            z-index: 20;
+                            transition: .5s;
+                            .dropdown-li{
+                                position: relative;
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                &:hover{
+                                    .other-dropdown-otr{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        top: -24px;
+                                        filter: blur(0);
+                                    }
+                                }
+                                .dropdown-a{
+                                    position: relative;
+                                    display: inline-flex;
+                                    color: $Gray-Shade-2;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                        padding-left: 16px;
+                                    }
+                                    &:hover::after{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        left: 0;
+                                    }
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $Primary-Color-Home-1;
+                                        top: 50%;
+                                        left: -16px;
+                                        transform: translateY(-50%);
+                                        border-radius: 50px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                    }
+                                }
+                                .other-dropdown-otr{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 170px;
+                                    width: 220px;
+                                    padding: 16px 24px;
+                                    background-color: $White-Color;
+                                    box-shadow: $box-shadow-custom;
+                                    filter: blur(10px);
+                                    border-radius: 24px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: .5s;
+                                    z-index: 30;
+                                    .other-dropdown-li{
+                                        position: relative;
+                                        &:not(:last-child){
+                                            margin-bottom: 8px;
+                                        }
+                                        .other-dropdown-a{
+                                            position: relative;
+                                            display: inline-flex;
+                                            color: $Gray-Shade-2;
+                                            transition: .3s;
+                                            &:hover{
+                                                color: $Primary-Color-Home-1;
+                                                padding-left: 16px;
+                                            }
+                                            &:hover::after{
+                                                opacity: 1;
+                                                visibility: visible;
+                                                left: 0;
+                                            }
+                                            &::after{
+                                                content: "";
+                                                position: absolute;
+                                                width: 8px;
+                                                height: 8px;
+                                                background-color: $Primary-Color-Home-1;
+                                                top: 50%;
+                                                left: -16px;
+                                                transform: translateY(-50%);
+                                                border-radius: 50px;
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: .3s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .display{
+                        @include breakpoint($secreen-max-lg){
+                            display: none;
+                        }
+                    }
+                    .dots{
+                        position: relative;
+                        display: none;
+                        @include breakpoint($secreen-max-lg){
+                            display: block;
+                        }
+                        .dot-a{
+                            color: $Gray-Shade-1;
+                            line-height: 50px;
+                            transition: .3s;
+                            cursor: pointer;
+                            &:hover{
+                                color: $Primary-Color-Home-1;
+                            }
+                        }
+                        .dropdown-dot{
+                            position: absolute;
+                            left: -24px;
+                            width: 220px;
+                            padding: 16px 24px;
+                            opacity: 0;
+                            visibility: hidden;
+                            background-color: $White-Color;
+                            box-shadow: $box-shadow-custom;
+                            border-radius: 24px;
+                            z-index: 20;
+                            transition: .5s;
+                            .dropdown-li{
+                                position: relative;
+                                &:not(:last-child){
+                                    margin-bottom: 8px;
+                                }
+                                &:hover{
+                                    .other-dropdown-otr{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        top: -24px;
+                                        filter: blur(0);
+                                    }
+                                }
+                                .dropdown-a{
+                                    position: relative;
+                                    display: inline-flex;
+                                    color: $Gray-Shade-2;
+                                    transition: .3s;
+                                    &:hover{
+                                        color: $Primary-Color-Home-1;
+                                        padding-left: 16px;
+                                    }
+                                    &:hover::after{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        left: 0;
+                                    }
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $Primary-Color-Home-1;
+                                        top: 50%;
+                                        left: -16px;
+                                        transform: translateY(-50%);
+                                        border-radius: 50px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: .3s;
+                                    }
+                                }
+                                .other-dropdown-otr{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 170px;
+                                    width: 220px;
+                                    padding: 16px 24px;
+                                    background-color: $White-Color;
+                                    box-shadow: $box-shadow-custom;
+                                    filter: blur(10px);
+                                    border-radius: 24px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: .5s;
+                                    z-index: 30;
+                                    .other-dropdown-li{
+                                        position: relative;
+                                        &:not(:last-child){
+                                            margin-bottom: 8px;
+                                        }
+                                        .other-dropdown-a{
+                                            position: relative;
+                                            display: inline-flex;
+                                            color: $Gray-Shade-2;
+                                            transition: .3s;
+                                            &:hover{
+                                                color: $Primary-Color-Home-1;
+                                                padding-left: 16px;
+                                            }
+                                            &:hover::after{
+                                                opacity: 1;
+                                                visibility: visible;
+                                                left: 0;
+                                            }
+                                            &::after{
+                                                content: "";
+                                                position: absolute;
+                                                width: 8px;
+                                                height: 8px;
+                                                background-color: $Primary-Color-Home-1;
+                                                top: 50%;
+                                                left: -16px;
+                                                transform: translateY(-50%);
+                                                border-radius: 50px;
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: .3s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .action-otr{
+                display: flex;
+                align-items: center;
+                .btn-create{
+                    @include breakpoint($secreen-max-md){
+                        display: none;
+                    }
+                }
+                .bell-icon-otr{
+                    position: relative;
+                    margin: 0 24px;
+                    @include breakpoint($secreen-xs){
+                        position: inherit;
+                    }
+                    @include breakpoint($secreen-max-md){
+                        margin: 0 24px 0 0;
+                    }
+                    .icon-inr{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 52px;
+                        height: 52px;
+                        background-color: $Gray-Shade-4;
+                        border-radius: 100%;
+                        transition: .3s;
+                        cursor: pointer;
+                        @include breakpoint($secreen-xxs){
+                            width: 44px;
+                            height: 44px;
+                        }
+                        .bell-icon{
+
+                        }
+                        .circle{
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            background-color: $Primary-Color-Home-1;
+                            border-radius: 100%;
+                            top: 3px;
+                            right: 3px;
+                        }
+                    }
+                    .icon-hover{
+                        position: absolute;
+                        z-index: 999;
+                        right: 0;
+                        background-color: $White-Color;
+                        width: 370px;
+                        border-radius: 24px;
+                        padding: 20px 28px 24px 28px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .3s;
+                        box-shadow: $box-shadow-custom;
+                        @include breakpoint($secreen-xs){
+                            width: calc(100% - 30px);
+                            margin: 24px 15px 0 15px;
+                        }
+                        .heading-otr{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin: 0 0 16px 0;
+                            .head{
+                                color: $Black-Color;
+                            }
+                            .link-see{
+                                color: $Primary-Color-Home-1;
+                                cursor: pointer;
+                            }
+                        }
+                        .box-otr{
+                            display: flex;
+                            align-items: center;
+                            &:not(:last-child){
+                                margin: 0 0 12px 0;
+                            }
+                            .img-otr{
+                                margin: 0 16px 0 0;
+                                cursor: pointer;
+                                .art-img{
+                                    width: 60px;
+                                }
+                            }
+                            .content-otr{
+                                .desc{
+                                    color: $Black-Color;
+                                }
+                                .desc-2{
+                                    color: $Gray-Shade-1;
+                                }
+                                .desc-3{
+                                    color: $Gray-Shade-2;
+                                }
+                            }
+                        }
+                    }
+                }
+                .profile-otr{
+                    position: relative;
+                    @include breakpoint($secreen-xs){
+                        position: inherit;
+                    }
+                    .profile-inr{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        height: 52px;
+                        border-radius: 12px;
+                        border: 1px solid $Gray-Shade-3;
+                        transition: .3s;
+                        cursor: pointer;
+                        @include breakpoint($secreen-xs){
+                            border: none;
+                            border-radius: 0;
+                        }
+                        @include breakpoint($secreen-xxs){
+                            height: 44px;
+                        }
+                        .creator{
+                            width: 52px;
+                            height: 52px;
+                            border-radius: 12px;
+                            @include breakpoint($secreen-xxs){
+                                width: 44px;
+                                height: 44px;
+                            }
+                        }
+                        .price{
+                            color: $Black-Color;
+                            margin: 0 16px;
+                            @include breakpoint($secreen-xs){
+                                display: none;
+                            }
+                        }
+                    }
+                    .icon-hover-2{
+                        position: absolute;
+                        z-index: 999;
+                        right: 0;
+                        background-color: $White-Color;
+                        width: 275px;
+                        border-radius: 24px;
+                        padding: 20px 28px;
+                        transition: .3s;
+                        box-shadow: $box-shadow-custom;
+                        opacity: 0;
+                        visibility: hidden;
+                        @include breakpoint($secreen-xs){
+                            width: calc(100% - 30px);
+                            margin: 24px 15px 0 15px;
+                        }
+                        .heading{
+                            color: $Black-Color;
+                            margin: 0 0 8px 0;
+                        }
+                        .copy-icon-otr{
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            .desc{
+                                color: $Gray-Shade-2;
+                                margin: 0 8px 0 0;
+                            }
+                        }
+                        .box-otr{
+                            display: flex;
+                            align-items: center;
+                            background-color: $Gray-Shade-4;
+                            border-radius: 16px;
+                            padding: 12px 20px 12px 16px;
+                            margin: 20px 0;
+                            .img-otr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 52px;
+                                height: 52px;
+                                border-radius: 100%;
+                                background-color: $White-Color;
+                                margin: 0 12px 0 0;
+                            }
+                            .price-otr{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                .desc{
+                                    color: $Gray-Shade-2;
+                                }
+                                .heading{
+                                    color: $Black-Color;
+                                }
+                            }
+                        }
+                        .link-profile-otr{
+                            .link-profile-inr{
+                                display: flex;
+                                align-items: center;
+                                &:not(:last-child){
+                                    margin: 0 0 8px 0;
+                                }
+                                &:hover{
+                                    .profile{
+                                        color: $Primary-Color-Home-1 !important;
+                                        margin: 0 0 0 8px;
+                                    }
+                                    .circle-hover{
+                                        display: block;
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+                                .profile{
+                                    color: $Gray-Shade-1 !important;
+                                    transition: .3s !important;
+                                }
+                                .circle-hover{
+                                    display: none;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: $Primary-Color-Home-1;
+                                    border-radius: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.displayblock{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/*------------------------------------------
+            Navbar End Here
+-------------------------------------------*/
+
+/*------------------------------------------
+            Navbar Start Here
+-------------------------------------------*/
+
+.create-dark{
+    margin: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        margin: 56px 0 80px 0 !important;
+    }
+    .container{
+        .col-head-otr{
+            margin: 0 auto;
+            .create-heading{
+                color: $White-Color;
+            }
+        }
+        .line{
+            width: 100%;
+            height: 1px;
+            background-color: $Dark-bg-tertiary;
+            margin: 36px 0;
+            display: flex;
+        }
+        .col-create-otr{
+            margin: 0 auto;
+            .col-create-inr{
+                .desc{
+                    color: $Dark-Gray-Shade-1;
+                    margin: 0 0 36px 0;
+                    .desc-inr{
+                        color: $Dark-Gray-Shade-2;
+                        display: inline;
+                    }
+                }
+                .img-main{
+                    display: flex;
+                    align-items: center;
+                    @include breakpoint($secreen-xxs){
+                        flex-direction: column;
+                        width: 100%;
+                    }
+                    .img-otr{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        @include breakpoint($secreen-xxs){
+                            align-items: initial;
+                            width: 100%;
+                        }
+                        &:not(:last-child){
+                            margin: 0 30px 0 0;
+                            @include breakpoint($secreen-xxs){
+                                margin: 0 0 48px 0;
+                            }
+                        }
+                        .img-inr{
+                            .img{
+                                width: 100%;
+                                border-radius: 24px;
+                            }
+                        }
+                        .btn-create{
+                            position: absolute;
+                            width: calc(100% - 48px);
+                            text-align: center;
+                            bottom: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Navbar Start Here
+-------------------------------------------*/
