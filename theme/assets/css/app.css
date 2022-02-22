@@ -2056,7 +2056,7 @@
 }
 
 .featured-artwork-dark .container-fluid .featured-artwork-inr .row-custom .col-otr .col-inr .box-head:hover {
-  color: #366CE3;
+
 }
 
 .featured-artwork-dark .container-fluid .featured-artwork-inr .row-custom .col-otr .col-inr .bid-main {
@@ -13700,7 +13700,7 @@
 }
 
 .explore-artwork-dark .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .col-inr .time-main .users-main .create-img-otr .hover-box .hover-box-inr .post-desc {
-  color: #CFCFCF;
+  color: #FFFFFF;
 }
 
 .explore-artwork-dark .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .col-inr .time-main .users-main .create-img-otr .hover-box1 {
@@ -16116,6 +16116,12 @@ p {
   font-family: "DMSans-Bold";
 }
 
+.body-mb-team {
+  font-size: 25px;
+  line-height: 40px;
+  font-family: "DMSans-Bold";
+}
+
 .body-s {
   font-size: 16px;
   line-height: 32px;
@@ -16131,6 +16137,12 @@ p {
 .body-xsb {
   font-size: 14px;
   line-height: 28px;
+  font-family: "DMSans-Bold";
+}
+
+.body-xxs {
+  font-size: 20px;
+  line-height: 30px;
   font-family: "DMSans-Bold";
 }
 
