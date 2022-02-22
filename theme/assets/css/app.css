@@ -218,7 +218,8 @@
 .overlay-content-otr-dark .modal-content-custom .overlay-content .icon-ul {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 72px 0;
+  margin: 0 0 72px 128px;
+  align-items: center;
 }
 
 .overlay-content-otr-dark .modal-content-custom .overlay-content .icon-ul .icon-li {
