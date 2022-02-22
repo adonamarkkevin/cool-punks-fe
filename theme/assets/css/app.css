@@ -16327,5 +16327,13 @@ input[type=number] {
   }
 }
 
+.footer-home2-dark {
+    padding: 0 !important ;
+}
+
+.heading-h4.ethoz-head, .icon-ul {
+  margin-top: 85px !important;
+}
+
 
 /*# sourceMappingURL=app.css.map*/
